@@ -1,0 +1,41 @@
+product_id,sku,upc,product_name,category,vendor_id,vendor_name,unit_of_measure,case_pack_size,product_icon,current_sell_price,latest_vendor_cost,previous_vendor_cost,target_margin_pct,current_margin_pct,current_stock_qty,reorder_point_qty,recommended_reorder_qty,units_sold_7d,weekly_sales_amount,days_on_hand,demand_trend,status,estimated_profit_impact,active
+P001,RB-24CT,0001112200001,Red Bull 24ct,Energy Drink,V001,Golden Supply Co.,case,24,🥤,44.81,25.99,23.96,30,42,2,9,6,28,78.12,12,High,High Demand,312,TRUE
+P002,COKE-12OZ,0001112200002,Coca-Cola 12oz,Beverage,V003,Hudson Beverage,case,24,🥤,24.42,16.12,14.99,30,34,1,8,5,24,51.36,7,High,High Demand,256,TRUE
+P003,EGG-12CT,0001112200003,Eggs 12ct,Grocery,V005,Daily Grocery Wholesale,carton,12,🥚,37.39,26.92,26.45,30,28,12,6,20,20,36.0,6,Medium,Reorder Soon,128,TRUE
+P004,SBUX-FRAP,0001112200004,Starbucks Frappuccino,Beverage,V003,Hudson Beverage,case,12,☕,42.69,24.76,22.83,30,42,3,6,4,18,88.2,6,High,Profitable,98,TRUE
+P005,MILK-GAL,0001112200005,Milk Gallon,Dairy,V002,Fresh Dairy Co.,unit,1,🥛,4.49,3.02,2.79,30,32.7,18,5,12,16,71.84,18,Low,Profit Leak,96,TRUE
+P006,KETTLE-CHIPS,0001112200006,Kettle Chips Sea Salt,Snacks,V004,Metro Snacks,case,12,🍟,2.49,2.19,2.1,18,12,45,2,0,5,22.35,45,Low,Low Turnover,-72,TRUE
+P007,SPARK-WATER,0001112200007,Sparkling Water Variety Pack,Beverage,V003,Hudson Beverage,case,12,💧,5.99,5.27,5.1,18,12,22,2,0,7,19.99,10,Low,Weak Margin,-38,TRUE
+P008,BREAD-WHT,0001112200008,White Bread,Grocery,V005,Daily Grocery Wholesale,unit,1,🍞,3.3,2.21,2.12,30,33.1,30,12,0,37,122.1,40,High,Healthy,32.64,TRUE
+P009,BANANA-LB,0001112200009,Bananas,Produce,V005,Daily Grocery Wholesale,lb,1,🍌,4.18,2.52,2.49,30,39.7,48,4,0,13,54.34,20,Medium,Healthy,48.81,TRUE
+P010,CHOC-BAR,0001112200010,Chocolate Bar,Candy,V004,Metro Snacks,box,24,🍫,27.61,16.04,14.87,30,41.9,28,2,0,8,220.88,25,Medium,Healthy,22.74,TRUE
+P011,DORITOS,0001112200011,Doritos Nacho Cheese,Snacks,V004,Metro Snacks,case,12,🍟,44.82,27.7,27.21,30,38.2,11,12,18,37,1658.34,27,High,Low Stock,308.16,TRUE
+P012,LAY-CLASSIC,0001112200012,Lay's Classic Chips,Snacks,V004,Metro Snacks,case,12,🍟,18.81,14.05,13.6,30,25.3,40,8,0,26,489.06,7,High,Healthy,30.38,TRUE
+P013,WATER-24PK,0001112200013,Bottled Water 24pk,Beverage,V003,Hudson Beverage,case,24,💧,17.29,13.19,12.14,30,23.7,58,2,0,8,138.32,9,Medium,Healthy,33.62,TRUE
+P014,GATORADE,0001112200014,Gatorade 20oz,Beverage,V003,Hudson Beverage,case,24,🥤,30.95,21.88,21.81,30,29.3,27,4,0,13,402.35,45,Medium,Healthy,43.42,TRUE
+P015,ORANGE-JUICE,0001112200015,Orange Juice,Beverage,V002,Fresh Dairy Co.,unit,1,🧃,4.16,2.44,2.37,30,41.4,44,13,0,41,170.56,49,High,Healthy,28.69,TRUE
+P016,YOGURT,0001112200016,Greek Yogurt Cup,Dairy,V002,Fresh Dairy Co.,case,12,🥛,26.09,18.37,16.86,30,29.6,18,12,0,38,991.42,52,High,Healthy,69.77,TRUE
+P017,BUTTER,0001112200017,Butter Sticks,Dairy,V002,Fresh Dairy Co.,box,4,🧈,42.18,32.18,28.46,30,23.7,29,7,0,23,970.14,16,High,Healthy,36.42,TRUE
+P018,CHEESE,0001112200018,Cheddar Cheese Block,Dairy,V002,Fresh Dairy Co.,unit,1,🧀,10.18,6.9,6.77,30,32.2,45,5,0,16,162.88,44,Medium,Healthy,54.94,TRUE
+P019,COFFEE-CAN,0001112200019,Ground Coffee,Grocery,V005,Daily Grocery Wholesale,unit,1,☕,5.0,3.77,3.45,30,24.6,38,12,0,38,190.0,40,High,Healthy,36.02,TRUE
+P020,SUGAR,0001112200020,Sugar 4lb,Grocery,V005,Daily Grocery Wholesale,bag,1,🍚,5.28,3.56,3.31,30,32.6,36,3,0,11,58.08,51,Medium,Healthy,54.48,TRUE
+P021,RICE,0001112200021,Jasmine Rice 5lb,Grocery,V005,Daily Grocery Wholesale,bag,1,🍚,1.17,0.93,0.9,30,20.7,42,10,0,30,35.1,27,High,Healthy,20.08,TRUE
+P022,PASTA,0001112200022,Pasta Box,Grocery,V005,Daily Grocery Wholesale,box,1,🍝,6.7,4.71,4.31,30,29.7,59,12,0,38,254.6,46,High,Healthy,90.39,TRUE
+P023,SAUCE,0001112200023,Tomato Sauce Jar,Grocery,V005,Daily Grocery Wholesale,jar,1,🥫,8.57,5.57,5.32,30,35.0,53,6,0,20,171.4,10,High,Healthy,66.28,TRUE
+P024,SOUP,0001112200024,Chicken Soup Can,Grocery,V005,Daily Grocery Wholesale,can,1,🥫,3.37,2.63,2.32,30,22.0,36,6,0,19,64.03,35,Medium,Healthy,75.96,TRUE
+P025,TUNA,0001112200025,Tuna Can,Grocery,V005,Daily Grocery Wholesale,can,1,🥫,11.46,6.9,6.36,30,39.8,42,11,0,35,401.1,26,High,Healthy,30.91,TRUE
+P026,ICECREAM,0001112200026,Ice Cream Pint,Frozen,V002,Fresh Dairy Co.,unit,1,🍦,8.55,5.86,5.8,30,31.5,4,12,18,36,307.8,41,High,Low Stock,48.42,TRUE
+P027,FROZEN-PIZZA,0001112200027,Frozen Pizza,Frozen,V005,Daily Grocery Wholesale,unit,1,🍕,3.48,2.84,2.87,30,18.5,19,7,0,22,76.56,39,High,Healthy,19.63,TRUE
+P028,HOTDOG,0001112200028,Hot Dog Pack,Meat,V005,Daily Grocery Wholesale,pack,1,🌭,8.92,7.13,6.76,30,20.1,52,2,0,7,62.44,11,Medium,Healthy,57.62,TRUE
+P029,BACON,0001112200029,Bacon Pack,Meat,V005,Daily Grocery Wholesale,pack,1,🥓,2.13,1.49,1.43,30,29.9,37,6,0,19,40.47,30,Medium,Healthy,84.79,TRUE
+P030,SOAP,0001112200030,Dish Soap,Household,V005,Daily Grocery Wholesale,unit,1,🧼,12.33,7.25,7.15,30,41.2,49,5,0,15,184.95,45,Medium,Healthy,39.94,TRUE
+P031,PAPER-TOWEL,0001112200031,Paper Towels,Household,V005,Daily Grocery Wholesale,pack,1,🧻,7.15,5.08,4.84,30,29.0,19,3,0,10,71.5,24,Medium,Healthy,32.98,TRUE
+P032,TOILET-PAPER,0001112200032,Toilet Paper 12pk,Household,V005,Daily Grocery Wholesale,pack,12,🧻,18.4,12.55,12.08,30,31.8,8,2,0,3,55.2,6,Medium,Healthy,71.63,TRUE
+P033,TRASH-BAGS,0001112200033,Trash Bags,Household,V005,Daily Grocery Wholesale,box,1,🗑️,3.67,2.18,2.18,30,40.6,36,2,0,7,25.69,45,Medium,Healthy,34.04,TRUE
+P034,ADVIL,0001112200034,Pain Reliever,Pharmacy,V005,Daily Grocery Wholesale,unit,1,💊,5.77,3.95,3.88,30,31.5,40,13,0,39,225.03,53,High,Healthy,52.81,TRUE
+P035,BATTERY-AA,0001112200035,AA Batteries,Electronics,V005,Daily Grocery Wholesale,pack,4,🔋,33.84,24.3,21.7,30,28.2,26,10,0,30,1015.2,32,High,Healthy,48.89,TRUE
+P036,ENERGY-BAR,0001112200036,Protein Bar,Candy,V004,Metro Snacks,box,12,🍫,42.75,34.46,33.48,30,19.4,7,3,0,9,384.75,24,Medium,Healthy,47.21,TRUE
+P037,CEREAL,0001112200037,Cereal Box,Grocery,V005,Daily Grocery Wholesale,box,1,🥣,7.72,6.12,5.55,30,20.7,32,12,0,37,285.64,14,High,Healthy,26.21,TRUE
+P038,ALMONDS,0001112200038,Blue Diamond Almonds,Snacks,V004,Metro Snacks,case,12,🥜,25.38,19.24,19.42,30,24.2,55,10,0,31,786.78,38,High,Healthy,83.91,TRUE
+P039,MANGO-JUICE,0001112200039,Mango Juice,Beverage,V003,Hudson Beverage,case,12,🧃,22.15,14.55,13.91,30,34.3,9,2,0,3,66.45,18,Medium,Healthy,89.11,TRUE
+P040,TEA-BOTTLE,0001112200040,Iced Tea Bottle,Beverage,V003,Hudson Beverage,case,12,🧋,23.35,16.32,14.85,30,30.1,7,9,14,28,653.8,13,High,Low Stock,98.42,TRUE

@@ -1,0 +1,7 @@
+metric_key,metric_label,metric_value,metric_display,change_pct,comparison,status_color
+todays_sales,Today’s Sales,3842.65,"$3,842.65",12.6,vs yesterday,green
+estimated_profit,Estimated Profit,1246.30,"$1,246.30",18.4,vs yesterday,green
+low_stock_items,Low Stock,7,7 items,,,orange
+unpaid_invoices,Unpaid Invoices,1184.00,"$1,184",,,red
+pos_sync,POS Sync,Connected,Connected,,,green
+invoice_tracking,Invoice Tracking,Active,Active,,,green

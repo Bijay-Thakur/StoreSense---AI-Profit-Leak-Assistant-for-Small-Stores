@@ -1,0 +1,11 @@
+recommendation_id,product_id,product_name,category,vendor_name,action,recommended_reorder_qty,stock_unit,current_stock_qty,demand_trend,current_margin_pct,estimated_profit_impact,priority,reason
+REC-P001,P001,Red Bull 24ct,Energy Drink,Golden Supply Co.,Reorder,6,case,2,High,42,312,High,Fast seller with low stock
+REC-P002,P002,Coca-Cola 12oz,Beverage,Hudson Beverage,Reorder,5,case,1,High,34,256,High,Fast seller with low stock
+REC-P003,P003,Eggs 12ct,Grocery,Daily Grocery Wholesale,Reorder,20,carton,12,Medium,28,128,Medium,Demand is steady and stock is approaching reorder point
+REC-P004,P004,Starbucks Frappuccino,Beverage,Hudson Beverage,Reorder,4,case,3,High,42,98,Low,Strong margin and healthy demand
+REC-P005,P005,Milk Gallon,Dairy,Fresh Dairy Co.,Adjust Price,12,unit,18,Low,32.7,96,High,Vendor cost increased while shelf price stayed flat
+REC-P006,P006,Kettle Chips Sea Salt,Snacks,Metro Snacks,Do Not Reorder,0,case,45,Low,12,-72,Medium,Slow-moving item with too many days on hand
+REC-P007,P007,Sparkling Water Variety Pack,Beverage,Hudson Beverage,Do Not Reorder,0,case,22,Low,12,-38,Medium,Margin is below target
+REC-P011,P011,Doritos Nacho Cheese,Snacks,Metro Snacks,Reorder,18,case,11,High,38.2,308.16,Low,Recommended by inventory rules
+REC-P026,P026,Ice Cream Pint,Frozen,Fresh Dairy Co.,Reorder,18,unit,4,High,31.5,48.42,Low,Recommended by inventory rules
+REC-P040,P040,Iced Tea Bottle,Beverage,Hudson Beverage,Reorder,14,case,7,High,30.1,98.42,Low,Recommended by inventory rules

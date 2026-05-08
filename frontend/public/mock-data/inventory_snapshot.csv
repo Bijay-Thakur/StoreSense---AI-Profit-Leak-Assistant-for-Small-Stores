@@ -1,0 +1,41 @@
+product_id,sku,product_name,category,vendor_name,beginning_stock_qty,units_sold_7d,units_received_7d,ending_stock_qty,stock_unit,reorder_point_qty,recommended_reorder_qty,stock_status,last_pos_sync_at
+P001,RB-24CT,Red Bull 24ct,Energy Drink,Golden Supply Co.,28,28,0,2,case,9,6,High Demand,2024-05-14 21:57:00
+P002,COKE-12OZ,Coca-Cola 12oz,Beverage,Hudson Beverage,21,24,0,1,case,8,5,High Demand,2024-05-14 21:57:00
+P003,EGG-12CT,Eggs 12ct,Grocery,Daily Grocery Wholesale,20,20,12,12,carton,6,20,Reorder Soon,2024-05-14 21:57:00
+P004,SBUX-FRAP,Starbucks Frappuccino,Beverage,Hudson Beverage,17,18,24,3,case,6,4,Profitable,2024-05-14 21:57:00
+P005,MILK-GAL,Milk Gallon,Dairy,Fresh Dairy Co.,30,16,24,18,unit,5,12,Profit Leak,2024-05-14 21:57:00
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Snacks,Metro Snacks,50,5,0,45,case,2,0,Low Turnover,2024-05-14 21:57:00
+P007,SPARK-WATER,Sparkling Water Variety Pack,Beverage,Hudson Beverage,29,7,12,22,case,2,0,Weak Margin,2024-05-14 21:57:00
+P008,BREAD-WHT,White Bread,Grocery,Daily Grocery Wholesale,66,37,0,30,unit,12,0,Healthy,2024-05-14 21:57:00
+P009,BANANA-LB,Bananas,Produce,Daily Grocery Wholesale,61,13,24,48,lb,4,0,Healthy,2024-05-14 21:57:00
+P010,CHOC-BAR,Chocolate Bar,Candy,Metro Snacks,35,8,0,28,box,2,0,Healthy,2024-05-14 21:57:00
+P011,DORITOS,Doritos Nacho Cheese,Snacks,Metro Snacks,47,37,24,11,case,12,18,Low Stock,2024-05-14 21:57:00
+P012,LAY-CLASSIC,Lay's Classic Chips,Snacks,Metro Snacks,66,26,24,40,case,8,0,Healthy,2024-05-14 21:57:00
+P013,WATER-24PK,Bottled Water 24pk,Beverage,Hudson Beverage,66,8,0,58,case,2,0,Healthy,2024-05-14 21:57:00
+P014,GATORADE,Gatorade 20oz,Beverage,Hudson Beverage,39,13,0,27,case,4,0,Healthy,2024-05-14 21:57:00
+P015,ORANGE-JUICE,Orange Juice,Beverage,Fresh Dairy Co.,85,41,0,44,unit,13,0,Healthy,2024-05-14 21:57:00
+P016,YOGURT,Greek Yogurt Cup,Dairy,Fresh Dairy Co.,56,38,6,18,case,12,0,Healthy,2024-05-14 21:57:00
+P017,BUTTER,Butter Sticks,Dairy,Fresh Dairy Co.,51,23,6,29,box,7,0,Healthy,2024-05-14 21:57:00
+P018,CHEESE,Cheddar Cheese Block,Dairy,Fresh Dairy Co.,60,16,12,45,unit,5,0,Healthy,2024-05-14 21:57:00
+P019,COFFEE-CAN,Ground Coffee,Grocery,Daily Grocery Wholesale,76,38,24,38,unit,12,0,Healthy,2024-05-14 21:57:00
+P020,SUGAR,Sugar 4lb,Grocery,Daily Grocery Wholesale,47,11,0,36,bag,3,0,Healthy,2024-05-14 21:57:00
+P021,RICE,Jasmine Rice 5lb,Grocery,Daily Grocery Wholesale,72,30,24,42,bag,10,0,Healthy,2024-05-14 21:57:00
+P022,PASTA,Pasta Box,Grocery,Daily Grocery Wholesale,96,38,24,59,box,12,0,Healthy,2024-05-14 21:57:00
+P023,SAUCE,Tomato Sauce Jar,Grocery,Daily Grocery Wholesale,72,20,6,53,jar,6,0,Healthy,2024-05-14 21:57:00
+P024,SOUP,Chicken Soup Can,Grocery,Daily Grocery Wholesale,54,19,0,36,can,6,0,Healthy,2024-05-14 21:57:00
+P025,TUNA,Tuna Can,Grocery,Daily Grocery Wholesale,77,35,12,42,can,11,0,Healthy,2024-05-14 21:57:00
+P026,ICECREAM,Ice Cream Pint,Frozen,Fresh Dairy Co.,28,36,24,4,unit,12,18,Low Stock,2024-05-14 21:57:00
+P027,FROZEN-PIZZA,Frozen Pizza,Frozen,Daily Grocery Wholesale,41,22,6,19,unit,7,0,Healthy,2024-05-14 21:57:00
+P028,HOTDOG,Hot Dog Pack,Meat,Daily Grocery Wholesale,59,7,12,52,pack,2,0,Healthy,2024-05-14 21:57:00
+P029,BACON,Bacon Pack,Meat,Daily Grocery Wholesale,56,19,24,37,pack,6,0,Healthy,2024-05-14 21:57:00
+P030,SOAP,Dish Soap,Household,Daily Grocery Wholesale,64,15,24,49,unit,5,0,Healthy,2024-05-14 21:57:00
+P031,PAPER-TOWEL,Paper Towels,Household,Daily Grocery Wholesale,28,10,6,19,pack,3,0,Healthy,2024-05-14 21:57:00
+P032,TOILET-PAPER,Toilet Paper 12pk,Household,Daily Grocery Wholesale,11,3,24,8,pack,2,0,Healthy,2024-05-14 21:57:00
+P033,TRASH-BAGS,Trash Bags,Household,Daily Grocery Wholesale,42,7,24,36,box,2,0,Healthy,2024-05-14 21:57:00
+P034,ADVIL,Pain Reliever,Pharmacy,Daily Grocery Wholesale,78,39,12,40,unit,13,0,Healthy,2024-05-14 21:57:00
+P035,BATTERY-AA,AA Batteries,Electronics,Daily Grocery Wholesale,55,30,24,26,pack,10,0,Healthy,2024-05-14 21:57:00
+P036,ENERGY-BAR,Protein Bar,Candy,Metro Snacks,15,9,0,7,box,3,0,Healthy,2024-05-14 21:57:00
+P037,CEREAL,Cereal Box,Grocery,Daily Grocery Wholesale,68,37,12,32,box,12,0,Healthy,2024-05-14 21:57:00
+P038,ALMONDS,Blue Diamond Almonds,Snacks,Metro Snacks,85,31,24,55,case,10,0,Healthy,2024-05-14 21:57:00
+P039,MANGO-JUICE,Mango Juice,Beverage,Hudson Beverage,12,3,12,9,case,2,0,Healthy,2024-05-14 21:57:00
+P040,TEA-BOTTLE,Iced Tea Bottle,Beverage,Hudson Beverage,34,28,6,7,case,9,14,Low Stock,2024-05-14 21:57:00
