@@ -1,6 +1,6 @@
 # StoreSense
 
-**AI Profit Leak & Reorder Assistant for Small Stores**
+**POS-Connected Reorder, Invoice, and Profit-Leak Assistant for Small Stores**
 
 ## Overview
 
@@ -18,31 +18,33 @@ Small store owners often reorder and price by habit, not evidence. Vendor costs 
 
 ## Solution
 
-StoreSense is built as a **decision-support product**, not a generic “business dashboard.” It frames the day around profit health, stock risk, and reorder choices.
+StoreSense is built as a **decision-support product**, not a generic “business dashboard.” It frames the day around POS-driven sales health, stock risk, invoice due dates, and clear reorder/price actions.
 
-The **MVP** demonstrates end-to-end UX and a working **frontend + backend split**:
+The **MVP** demonstrates end-to-end UX with a polished mobile-first frontend and typed mock-data layer:
 
 - Daily **profit and sales** summary with recommended **action cards**
-- **Simulated invoice** flow (preview line items and a one-click “import” acknowledgement)
-- **Product** list with margin and status, plus a **product insight** example (Milk Gallon) with cost trend and narrative copy
-- **AI Reorder Plan** view with recommended reorders vs “do not reorder”
-- **Alerts** for profit leaks, low stock, weak margins, and turnover
+- **POS Activity** page showing transactions, top sold items, and hourly sales chart
+- **Products/Reorder Plan** page with “reorder” and “do not reorder” actions
+- **Product insight** detail (Milk Gallon) with vendor cost trend and price action
+- **Invoices** page with paid/unpaid/due/overdue tracking
+- **Alerts** page for priority issues and suggested actions
+- **Simple login flow** for demo access (`admin` / `admin`)
 
-Business logic and demo data are served from a **Flask API**; the **Next.js** app consumes that API for server-rendered screens and for browser calls via a built-in **proxy route** (see [Tech Stack](#tech-stack)).
+Core demo data is loaded from CSV files in `frontend/public/mock-data` through a lightweight typed utility in `frontend/src/data`.
 
 ## Key Features
 
 ### Home Dashboard
 
-Shows today’s sales and estimated profit deltas, low-stock and profit-leak callouts, AI-style action cards (reorder, repricing, skip reorder), weekly sales trend visualization, and top profitable products—all driven by **`GET /api/dashboard`** when the backend is running.
+Shows today’s sales/profit KPIs, low-stock and unpaid-invoice callouts, AI action cards, and a **premium daily sales line trend (Mon-Sat)** with y-axis sales labels for easier comparison.
 
-### Scan Invoice
+### POS Activity
 
-Simulates capturing a vendor receipt: **invoice preview** (vendor, line items, totals) from **`GET /api/invoice/preview`**, plus **`POST /api/invoice/import`** to acknowledge import. There is **no camera, OCR, or external document API** in this MVP.
+Shows live-style synced sales from mock POS lines: color-coded recent transactions, top items sold, and polished hourly sales bars.
 
-### AI Reorder Plan
+### Products / Reorder Plan
 
-**Insights** screen summarizes estimated spend and revenue impact, lists products to reorder with stock and demand hints, separates “do not reorder” SKUs, and includes a weekly strategy narrative—powered by **`GET /api/insights/reorder-plan`**. Recommendations are **rule-/template-style** demo content, not a live ML model.
+Summarizes estimated spend and revenue impact, lists products to reorder, separates “do not reorder” SKUs, and includes strategy guidance.
 
 ### Profit Leak Detection
 
@@ -52,9 +54,13 @@ Surfaces products and alerts where margins or supplier costs imply risk (for exa
 
 **Product Insight** (`/products/milk-gallon`): sell price, vendor cost, margin change language, weekly units, days on hand, cost trend visualization, AI analysis copy, and recommended actions—via **`GET /api/products/milk-gallon`** (detail) and **`GET /api/products`** (list).
 
+### Invoices
+
+Tracks paid, unpaid, due soon, and overdue vendor bills with summary KPI cards and filter tabs.
+
 ### Alerts
 
-**Alerts** (`/alerts`) lists prioritized issues with suggested actions (**`GET /api/alerts`**), aligned with the same product catalog used elsewhere.
+Lists prioritized issues (profit leak, low stock, invoice due, low turnover, weak margin, resolved) with filter pills and suggested actions.
 
 ## MVP Screens
 
@@ -62,24 +68,30 @@ These routes exist in the **Next.js App Router** under `frontend/app/`:
 
 | Route | Purpose |
 |--------|---------|
+| `/login` | Demo login page (`admin` / `admin`) |
 | `/` | Home dashboard |
 | `/home` | Same as Home (alias) |
-| `/scan` | Scan Invoice (preview + import) |
-| `/products` | Products list with search/filter (client-side over API data) |
+| `/sales` | POS activity dashboard |
+| `/products` | Reorder plan + product list |
 | `/products/milk-gallon` | Product insight detail (example SKU) |
-| `/insights` | AI Reorder Plan |
+| `/invoices` | Vendor invoice tracker |
 | `/alerts` | Alerts |
 
-Internal **API bridge**: `frontend/app/api/proxy/[...path]/route.ts` forwards browser requests from `/api/proxy/*` to the Flask **`/api/*`** endpoints.
+Legacy MVP routes (`/scan`, `/insights`) still exist but are secondary to the updated product flow above.
+
+### Demo Login
+
+- Username: `admin`
+- Password: `admin`
 
 ## Demo Workflow
 
-1. **Start the backend**, then **start the frontend** so all screens load live JSON (see [Getting Started](#getting-started)).
-2. The **owner opens StoreSense** and sees today’s KPIs, AI action cards, and trend/product snippets on **Home**.
-3. On **Scan Invoice**, they review a **simulated Golden Supply invoice** and tap **Import to Inventory**—the server returns a success response; no database or OCR runs.
-4. **Products** and **Insights** reflect the same canned catalog (margins, demand labels, reorder hints).
-5. **Product Insight** (Milk Gallon) and **Alerts** highlight a **profit leak** narrative (vendor cost vs price) with concrete suggested moves (e.g., raise price, limit reorder quantity).
-6. Taken together, the flow shows **how the product would close the loop**: invoice → assumed cost updates → margin and stock signals → prioritized actions—in a form ready to swap for real integrations later.
+1. Owner opens **Home** and sees KPIs + action cards.
+2. Opens **Sales** to review POS transactions, hourly demand, and top sellers.
+3. Uses **Products** to follow reorder/do-not-reorder recommendations.
+4. Opens **Milk Gallon insight** to understand vendor cost increase and pricing action.
+5. Reviews **Invoices** for due soon/overdue vendor bills.
+6. Uses **Alerts** to prioritize actions with clear business language.
 
 ## Tech Stack
 
@@ -87,14 +99,15 @@ Verified from **`frontend/package.json`** and **`backend/requirements.txt`**:
 
 | Layer | Technologies |
 |--------|----------------|
-| **Frontend** | [Next.js](https://nextjs.org/) **16** (App Router), [React](https://react.dev/) **19**, [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/) **4**, [Lucide React](https://lucide.dev/) (icons) |
-| **Backend** | [Python](https://www.python.org/) **3**, [Flask](https://flask.palletsprojects.com/) **3.x**, `flask-cors` |
+| **Frontend** | [Next.js](https://nextjs.org/) **16** (App Router), [React](https://react.dev/) **19**, [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/) **4**, [Lucide React](https://lucide.dev/) |
+| **Data Layer** | CSV files in `frontend/public/mock-data` + typed loaders/helpers in `frontend/src/data` |
+| **Backend (optional in MVP flow)** | [Python](https://www.python.org/) **3**, [Flask](https://flask.palletsprojects.com/) **3.x**, `flask-cors` |
 
 **Not used in this repository (do not assume):** Recharts (removed), Firebase, Supabase, OpenAI/LLM APIs, cloud OCR, real POS connectors, authentication services, or production databases.
 
 ## Mock Data Notice
 
-**All product catalog entries, sales figures, invoice lines, trend series, reorder recommendations, and alert text are simulated** and authored in **`backend/app.py`** (and rendered by the frontend). Nothing in this MVP learns from live store data or calls external pricing or OCR services.
+**All product catalog entries, sales figures, invoices, trends, recommendations, and alerts are simulated** and sourced from CSV files in **`frontend/public/mock-data`**. Nothing in this MVP uses live POS connectors, OCR, payment rails, or external APIs.
 
 The UI is **intentionally built** to show how StoreSense would behave once wired to:
 
@@ -132,7 +145,7 @@ Clone or open this repo. The app is split into **`frontend/`** (Next.js) and **`
 - **Node.js** (LTS recommended) and npm  
 - **Python 3** with `pip`
 
-### Backend
+### Backend (optional for legacy routes)
 
 ```bash
 cd backend
@@ -147,7 +160,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Flask listens on **`http://127.0.0.1:5000`** by default (`app.py`). Health check: **`GET http://127.0.0.1:5000/api/health`**.
+Flask listens on **`http://127.0.0.1:5000`** by default (`app.py`). This is optional for the updated CSV-driven core flow.
 
 ### Frontend
 
@@ -161,7 +174,7 @@ Open **`http://localhost:3000`**.
 
 `npm run dev` uses **Webpack** (not Turbopack) with a raised Node heap (`NODE_OPTIONS` via **`cross-env`**) so the dev server stays stable on constrained machines and avoids scanning a mistaken parent-folder workspace (e.g. a lockfile higher up under your user profile). Optional: **`npm run dev:turbo`** for Turbopack if you prefer it locally.
 
-Optional: copy **`frontend/.env.example`** to **`frontend/.env.local`** and set **`BACKEND_URL`** if Flask runs on a non-default host or port.
+No environment variables are required for the updated CSV-driven MVP routes.
 
 ### Production build (frontend)
 
