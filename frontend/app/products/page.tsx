@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { HeaderActions } from "../components/header-actions";
 import { Badge, Card, ProductRow, ScreenHeader } from "../components/ui";
 import { formatCurrency } from "@/src/data/helpers";
 import { loadInventorySnapshot, loadProducts, loadRecommendations } from "@/src/data/loaders";
@@ -32,7 +34,17 @@ export default async function ProductsPage() {
 
   return (
     <div className="space-y-4">
-      <ScreenHeader title="AI Reorder Plan" subtitle="What to buy this week" />
+      <ScreenHeader title="AI Reorder Plan" subtitle="What to buy this week" rightSlot={<HeaderActions />} />
+
+      <Card className="border-[#0F8A3B]/15 bg-gradient-to-r from-[#ECFDF3]/80 to-white">
+        <Link href="/market" className="flex items-center justify-between gap-3">
+          <div>
+            <p className="text-sm font-semibold text-[#111827]">Market Price Benchmark</p>
+            <p className="mt-0.5 text-xs text-[#6B7280]">Pro: compare your prices with nearby stores (demo data)</p>
+          </div>
+          <ArrowRight className="h-5 w-5 shrink-0 text-[#0F8A3B]" />
+        </Link>
+      </Card>
 
       <Card className="bg-[#ECFDF3]">
         <div className="grid grid-cols-3 gap-2 text-sm">

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { FileText } from "lucide-react";
 import { Badge, Card, ScreenHeader } from "../components/ui";
+import { HeaderActions } from "../components/header-actions";
 import { formatCurrency, getInvoiceSummary, getStatusColor } from "@/src/data/helpers";
 import type { Invoice } from "@/src/data/types";
 
@@ -18,7 +19,7 @@ export default function InvoicesClient({ invoices }: { invoices: Invoice[] }) {
 
   return (
     <div className="space-y-4">
-      <ScreenHeader title="Invoices" subtitle="Track paid, unpaid, and overdue vendor bills." />
+      <ScreenHeader title="Invoices" subtitle="Track paid, unpaid, and overdue vendor bills." rightSlot={<HeaderActions />} />
 
       <div className="grid grid-cols-2 gap-3">
         <Card><p className="text-xs text-[#6B7280]">Paid</p><p className="text-xl font-semibold">{summary.paid}</p></Card>

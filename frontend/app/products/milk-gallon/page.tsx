@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowLeft, Bell } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { HeaderActions } from "../../components/header-actions";
 import { Badge, Card, ProductAvatar, ScreenHeader } from "../../components/ui";
 import { formatCurrency } from "@/src/data/helpers";
 import { loadCostHistory, loadProducts } from "@/src/data/loaders";
@@ -12,7 +13,7 @@ export default async function MilkInsightPage() {
   if (!milk) {
     return (
       <div className="space-y-4">
-        <ScreenHeader title="Product Insight" subtitle="Monitor product margin and vendor changes" />
+        <ScreenHeader title="Product Insight" subtitle="Monitor product margin and vendor changes" rightSlot={<HeaderActions />} />
         <Card className="border-[#FCA5A5] bg-[#FEF2F2]">
           <p className="text-sm text-[#991B1B]">Missing milk product data.</p>
         </Card>
@@ -26,14 +27,11 @@ export default async function MilkInsightPage() {
         title="Product Insight"
         subtitle="Monitor product margin and vendor changes"
         rightSlot={
-          <div className="flex items-center gap-2">
-            <Link href="/products" className="rounded-full border border-[#E5E7EB] p-2 text-[#6B7280]">
+          <HeaderActions>
+            <Link href="/products" className="rounded-full border border-[#E5E7EB] p-2 text-[#6B7280]" aria-label="Back to products">
               <ArrowLeft className="h-4 w-4" />
             </Link>
-            <button type="button" className="rounded-full border border-[#E5E7EB] p-2 text-[#6B7280]" aria-label="Notifications">
-              <Bell className="h-4 w-4" />
-            </button>
-          </div>
+          </HeaderActions>
         }
       />
       <Card>

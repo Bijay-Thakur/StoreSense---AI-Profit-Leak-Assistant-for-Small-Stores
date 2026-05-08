@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Badge, Card, ScreenHeader } from "../components/ui";
+import { HeaderActions } from "../components/header-actions";
 import { getAlertsSummary, getUrgencyColor } from "@/src/data/helpers";
 import type { Alert, Product } from "@/src/data/types";
 
@@ -31,7 +32,7 @@ export default function AlertsClient({ alerts, products }: { alerts: Alert[]; pr
 
   return (
     <div className="space-y-4">
-      <ScreenHeader title="Alerts" subtitle="Issues that need your attention." />
+      <ScreenHeader title="Alerts" subtitle="Issues that need your attention." rightSlot={<HeaderActions />} />
       <Card>
         <div className="grid grid-cols-3 gap-2 text-xs">
           <div className="rounded-2xl bg-[#FEF2F2] p-2 text-center text-[#DC2626]">{summary.urgent} Urgent</div>
