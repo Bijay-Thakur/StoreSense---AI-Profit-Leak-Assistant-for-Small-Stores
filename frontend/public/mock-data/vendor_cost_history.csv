@@ -1,0 +1,321 @@
+product_id,sku,product_name,vendor_name,week_start,unit_cost
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-03-26,24.30
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-04-02,24.52
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-04-09,24.80
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-04-16,25.01
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-04-23,25.29
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-04-30,25.49
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-05-07,25.72
+P001,RB-24CT,Red Bull 24ct,Golden Supply Co.,2024-05-14,25.99
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-03-26,15.56
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-04-02,15.62
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-04-09,15.71
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-04-16,15.79
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-04-23,15.88
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-04-30,15.96
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-05-07,16.01
+P002,COKE-12OZ,Coca-Cola 12oz,Hudson Beverage,2024-05-14,16.12
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-03-26,24.32
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-04-02,24.64
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-04-09,25.04
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-04-16,25.46
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-04-23,25.82
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-04-30,26.17
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-05-07,26.56
+P003,EGG-12CT,Eggs 12ct,Daily Grocery Wholesale,2024-05-14,26.92
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-03-26,22.91
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-04-02,23.17
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-04-09,23.43
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-04-16,23.71
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-04-23,23.93
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-04-30,24.25
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-05-07,24.49
+P004,SBUX-FRAP,Starbucks Frappuccino,Hudson Beverage,2024-05-14,24.76
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-03-26,2.38
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-04-02,2.48
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-04-09,2.61
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-04-16,2.68
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-04-23,2.79
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-04-30,2.86
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-05-07,2.94
+P005,MILK-GAL,Milk Gallon,Fresh Dairy Co.,2024-05-14,3.02
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-03-26,2.06
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-04-02,2.08
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-04-09,2.11
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-04-16,2.16
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-04-23,2.12
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-04-30,2.12
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-05-07,2.14
+P006,KETTLE-CHIPS,Kettle Chips Sea Salt,Metro Snacks,2024-05-14,2.19
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-03-26,5.37
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-04-02,5.39
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-04-09,5.37
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-04-16,5.32
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-04-23,5.35
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-04-30,5.30
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-05-07,5.30
+P007,SPARK-WATER,Sparkling Water Variety Pack,Hudson Beverage,2024-05-14,5.27
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-03-26,2.22
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-04-02,2.18
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-04-09,2.18
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-04-16,2.21
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-04-23,2.17
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-04-30,2.18
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-05-07,2.23
+P008,BREAD-WHT,White Bread,Daily Grocery Wholesale,2024-05-14,2.21
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-03-26,2.46
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-04-02,2.49
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-04-09,2.44
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-04-16,2.46
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-04-23,2.47
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-04-30,2.49
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-05-07,2.49
+P009,BANANA-LB,Bananas,Daily Grocery Wholesale,2024-05-14,2.52
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-03-26,15.65
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-04-02,15.72
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-04-09,15.80
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-04-16,15.82
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-04-23,15.89
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-04-30,15.97
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-05-07,15.98
+P010,CHOC-BAR,Chocolate Bar,Metro Snacks,2024-05-14,16.04
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-03-26,24.49
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-04-02,24.95
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-04-09,25.43
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-04-16,25.87
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-04-23,26.28
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-04-30,26.75
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-05-07,27.21
+P011,DORITOS,Doritos Nacho Cheese,Metro Snacks,2024-05-14,27.70
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-03-26,14.22
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-04-02,14.15
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-04-09,14.16
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-04-16,14.17
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-04-23,14.09
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-04-30,14.08
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-05-07,14.05
+P012,LAY-CLASSIC,Lay's Classic Chips,Metro Snacks,2024-05-14,14.05
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-03-26,13.34
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-04-02,13.31
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-04-09,13.29
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-04-16,13.30
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-04-23,13.23
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-04-30,13.27
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-05-07,13.18
+P013,WATER-24PK,Bottled Water 24pk,Hudson Beverage,2024-05-14,13.19
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-03-26,22.06
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-04-02,22.05
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-04-09,22.06
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-04-16,22.00
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-04-23,21.95
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-04-30,21.93
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-05-07,21.95
+P014,GATORADE,Gatorade 20oz,Hudson Beverage,2024-05-14,21.88
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-03-26,2.22
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-04-02,2.26
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-04-09,2.29
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-04-16,2.31
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-04-23,2.34
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-04-30,2.39
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-05-07,2.39
+P015,ORANGE-JUICE,Orange Juice,Fresh Dairy Co.,2024-05-14,2.44
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-03-26,17.68
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-04-02,17.75
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-04-09,17.85
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-04-16,17.94
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-04-23,18.05
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-04-30,18.13
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-05-07,18.29
+P016,YOGURT,Greek Yogurt Cup,Fresh Dairy Co.,2024-05-14,18.37
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-03-26,29.98
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-04-02,30.25
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-04-09,30.64
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-04-16,30.96
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-04-23,31.23
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-04-30,31.51
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-05-07,31.86
+P017,BUTTER,Butter Sticks,Fresh Dairy Co.,2024-05-14,32.18
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-03-26,6.27
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-04-02,6.39
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-04-09,6.47
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-04-16,6.57
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-04-23,6.64
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-04-30,6.70
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-05-07,6.83
+P018,CHEESE,Cheddar Cheese Block,Fresh Dairy Co.,2024-05-14,6.90
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-03-26,3.51
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-04-02,3.56
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-04-09,3.58
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-04-16,3.65
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-04-23,3.70
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-04-30,3.73
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-05-07,3.75
+P019,COFFEE-CAN,Ground Coffee,Daily Grocery Wholesale,2024-05-14,3.77
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-03-26,3.55
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-04-02,3.53
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-04-09,3.57
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-04-16,3.52
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-04-23,3.53
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-04-30,3.56
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-05-07,3.57
+P020,SUGAR,Sugar 4lb,Daily Grocery Wholesale,2024-05-14,3.56
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-03-26,0.88
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-04-02,0.87
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-04-09,0.88
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-04-16,0.92
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-04-23,0.89
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-04-30,0.89
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-05-07,0.91
+P021,RICE,Jasmine Rice 5lb,Daily Grocery Wholesale,2024-05-14,0.93
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-03-26,4.64
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-04-02,4.64
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-04-09,4.67
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-04-16,4.67
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-04-23,4.67
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-04-30,4.72
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-05-07,4.74
+P022,PASTA,Pasta Box,Daily Grocery Wholesale,2024-05-14,4.71
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-03-26,5.55
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-04-02,5.59
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-04-09,5.60
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-04-16,5.53
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-04-23,5.59
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-04-30,5.53
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-05-07,5.57
+P023,SAUCE,Tomato Sauce Jar,Daily Grocery Wholesale,2024-05-14,5.57
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-03-26,2.67
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-04-02,2.67
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-04-09,2.61
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-04-16,2.66
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-04-23,2.62
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-04-30,2.66
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-05-07,2.63
+P024,SOUP,Chicken Soup Can,Daily Grocery Wholesale,2024-05-14,2.63
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-03-26,6.10
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-04-02,6.24
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-04-09,6.34
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-04-16,6.49
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-04-23,6.56
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-04-30,6.69
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-05-07,6.77
+P025,TUNA,Tuna Can,Daily Grocery Wholesale,2024-05-14,6.90
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-03-26,5.67
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-04-02,5.77
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-04-09,5.75
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-04-16,5.75
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-04-23,5.81
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-04-30,5.79
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-05-07,5.87
+P026,ICECREAM,Ice Cream Pint,Fresh Dairy Co.,2024-05-14,5.86
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-03-26,2.56
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-04-02,2.64
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-04-09,2.65
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-04-16,2.67
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-04-23,2.72
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-04-30,2.74
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-05-07,2.83
+P027,FROZEN-PIZZA,Frozen Pizza,Daily Grocery Wholesale,2024-05-14,2.84
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-03-26,6.34
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-04-02,6.43
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-04-09,6.56
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-04-16,6.66
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-04-23,6.75
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-04-30,6.87
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-05-07,6.98
+P028,HOTDOG,Hot Dog Pack,Daily Grocery Wholesale,2024-05-14,7.13
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-03-26,1.56
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-04-02,1.53
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-04-09,1.48
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-04-16,1.52
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-04-23,1.52
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-04-30,1.52
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-05-07,1.46
+P029,BACON,Bacon Pack,Daily Grocery Wholesale,2024-05-14,1.49
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-03-26,7.47
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-04-02,7.44
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-04-09,7.42
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-04-16,7.36
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-04-23,7.31
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-04-30,7.32
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-05-07,7.27
+P030,SOAP,Dish Soap,Daily Grocery Wholesale,2024-05-14,7.25
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-03-26,5.15
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-04-02,5.14
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-04-09,5.12
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-04-16,5.14
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-04-23,5.09
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-04-30,5.08
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-05-07,5.08
+P031,PAPER-TOWEL,Paper Towels,Daily Grocery Wholesale,2024-05-14,5.08
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-03-26,11.59
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-04-02,11.74
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-04-09,11.85
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-04-16,11.95
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-04-23,12.10
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-04-30,12.25
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-05-07,12.39
+P032,TOILET-PAPER,Toilet Paper 12pk,Daily Grocery Wholesale,2024-05-14,12.55
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-03-26,1.93
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-04-02,1.95
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-04-09,1.97
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-04-16,1.99
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-04-23,2.10
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-04-30,2.13
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-05-07,2.12
+P033,TRASH-BAGS,Trash Bags,Daily Grocery Wholesale,2024-05-14,2.18
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-03-26,3.87
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-04-02,3.87
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-04-09,3.89
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-04-16,3.90
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-04-23,3.92
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-04-30,3.94
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-05-07,3.92
+P034,ADVIL,Pain Reliever,Daily Grocery Wholesale,2024-05-14,3.95
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-03-26,21.79
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-04-02,22.11
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-04-09,22.53
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-04-16,22.83
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-04-23,23.25
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-04-30,23.56
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-05-07,23.94
+P035,BATTERY-AA,AA Batteries,Daily Grocery Wholesale,2024-05-14,24.30
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-03-26,33.30
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-04-02,33.46
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-04-09,33.62
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-04-16,33.80
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-04-23,33.93
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-04-30,34.11
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-05-07,34.30
+P036,ENERGY-BAR,Protein Bar,Metro Snacks,2024-05-14,34.46
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-03-26,6.22
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-04-02,6.22
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-04-09,6.24
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-04-16,6.15
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-04-23,6.20
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-04-30,6.12
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-05-07,6.14
+P037,CEREAL,Cereal Box,Daily Grocery Wholesale,2024-05-14,6.12
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-03-26,18.12
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-04-02,18.31
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-04-09,18.47
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-04-16,18.59
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-04-23,18.73
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-04-30,18.89
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-05-07,19.07
+P038,ALMONDS,Blue Diamond Almonds,Metro Snacks,2024-05-14,19.24
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-03-26,14.87
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-04-02,14.87
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-04-09,14.80
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-04-16,14.73
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-04-23,14.70
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-04-30,14.63
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-05-07,14.61
+P039,MANGO-JUICE,Mango Juice,Hudson Beverage,2024-05-14,14.55
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-03-26,16.19
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-04-02,16.18
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-04-09,16.24
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-04-16,16.24
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-04-23,16.26
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-04-30,16.30
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-05-07,16.33
+P040,TEA-BOTTLE,Iced Tea Bottle,Hudson Beverage,2024-05-14,16.32

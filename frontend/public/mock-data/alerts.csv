@@ -1,0 +1,7 @@
+alert_id,alert_type,severity,urgency_color,related_entity_type,related_entity_id,title,message,suggested_action,estimated_impact,status,created_at
+A001,Profit Leak,High,red,Product,P005,Milk Gallon profit leak,Vendor cost increased 8.2% while the selling price stayed the same.,Raise price to $4.99,96.00,Open,2024-05-14 09:00:00
+A002,Low Stock,High,orange,Product,P001,Red Bull low stock,Only 2 cases remaining and demand is high.,Reorder 6 cases,312.00,Open,2024-05-14 09:03:00
+A003,Invoice Due,High,red,Invoice,INV005,Golden Supply Co. invoice due in 48 hours,Invoice #78612 for $286.40 is due soon.,Review invoice and pay before due date,286.40,Open,2024-05-14 09:05:00
+A004,Low Turnover,Medium,orange,Product,P006,Kettle Chips slow-moving,45 days on hand with weak margin.,Do not reorder this week,-72.00,Open,2024-05-14 09:08:00
+A005,Weak Margin,Medium,yellow,Product,P007,Sparkling Water weak margin,"Current margin is 12%, below the 18% target.",Review supplier price or skip reorder,-38.00,Open,2024-05-14 09:10:00
+A006,Resolved,Low,green,Product,P004,Starbucks Frappuccino reordered,Reordered 4 cases on May 10.,No action needed,98.00,Resolved,2024-05-10 10:30:00

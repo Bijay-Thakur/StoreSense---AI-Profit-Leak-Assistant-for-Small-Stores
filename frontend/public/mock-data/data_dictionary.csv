@@ -1,0 +1,12 @@
+file_name,purpose,primary_key
+products.csv,"Master product catalog used by Products page, product detail page, reorder logic, and profit-leak cards.",product_id
+pos_sales_lines.csv,"One week of item-level POS sale events. Use this for POS Activity, recent transactions, units sold, and sales by product.",transaction_id + product_id + timestamp
+daily_sales_summary.csv,Aggregated 7-day sales values for dashboard weekly trend and KPI cards.,date
+hourly_sales_summary.csv,Hourly sales chart for POS Activity page.,date + hour
+inventory_snapshot.csv,"Current inventory, ending stock, reorder point, and recommended reorder quantity.",product_id
+vendor_invoices.csv,"Invoice tracker data for paid, unpaid, due soon, and overdue vendor bills.",invoice_id
+vendor_invoice_lines.csv,Line-level invoice items that can be matched to product costs.,invoice_id + line_number
+vendor_cost_history.csv,"8-week unit cost history for product insight charts, especially vendor cost trend.",product_id + week_start
+reorder_recommendations.csv,Precomputed mock recommendations for reorder plan and today’s AI actions.,recommendation_id
+alerts.csv,"Alerts page data for profit leaks, low stock, invoices due, low turnover, and resolved alerts.",alert_id
+dashboard_kpis.csv,Placeholder KPI values to match the presentation UI.,metric_key

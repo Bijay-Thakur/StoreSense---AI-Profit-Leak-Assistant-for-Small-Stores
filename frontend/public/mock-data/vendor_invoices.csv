@@ -1,0 +1,13 @@
+invoice_id,vendor_id,vendor_name,vendor_email,vendor_phone,invoice_number,invoice_date,due_date,amount,status,urgency_color,days_until_due,pdf_filename,source,reminder_48h_enabled,notes
+INV001,V001,Golden Supply Co.,billing@goldensupply.example,(212) 555-0141,78512,2024-05-12,2024-05-19,452.31,Paid,green,5,golden_supply_78512.pdf,Manual Upload,TRUE,
+INV002,V002,Fresh Dairy Co.,accounts@freshdairy.example,(718) 555-0188,78401,2024-05-13,2024-05-21,238.75,Due Soon,yellow,7,fresh_dairy_78401.pdf,Email PDF,TRUE,Payment reminder needed
+INV003,V003,Hudson Beverage,invoices@hudsonbev.example,(646) 555-0192,78322,2024-05-10,2024-05-27,312.40,Unpaid,orange,13,hudson_beverage_78322.pdf,Email PDF,TRUE,
+INV004,V004,Metro Snacks,ap@metrosnacks.example,(917) 555-0109,78215,2024-05-06,2024-05-15,180.54,Overdue,red,1,metro_snacks_78215.pdf,Email PDF,TRUE,Payment reminder needed
+INV005,V001,Golden Supply Co.,billing@goldensupply.example,(212) 555-0141,78612,2024-05-12,2024-05-14,286.40,Due Soon,yellow,0,golden_supply_78612.pdf,Manual Upload,TRUE,Payment reminder needed
+INV006,V005,Daily Grocery Wholesale,billing@dailygrocery.example,(347) 555-0156,55091,2024-05-11,2024-05-25,391.84,Unpaid,orange,11,daily_grocery_55091.pdf,Email PDF,TRUE,
+INV007,V002,Fresh Dairy Co.,accounts@freshdairy.example,(718) 555-0188,78415,2024-05-09,2024-05-16,211.20,Paid,green,2,fresh_dairy_78415.pdf,Email PDF,TRUE,
+INV008,V003,Hudson Beverage,invoices@hudsonbev.example,(646) 555-0192,78344,2024-05-08,2024-05-22,640.18,Paid,green,8,hudson_beverage_78344.pdf,Email PDF,TRUE,
+INV009,V004,Metro Snacks,ap@metrosnacks.example,(917) 555-0109,78240,2024-05-14,2024-05-28,153.28,Unpaid,orange,14,metro_snacks_78240.pdf,Manual Upload,TRUE,
+INV010,V005,Daily Grocery Wholesale,billing@dailygrocery.example,(347) 555-0156,55103,2024-05-14,2024-05-29,502.87,Unpaid,orange,15,daily_grocery_55103.pdf,Email PDF,TRUE,
+INV011,V001,Golden Supply Co.,billing@goldensupply.example,(212) 555-0141,78622,2024-05-15,2024-05-29,372.65,Unpaid,orange,15,golden_supply_78622.pdf,Manual Upload,TRUE,
+INV012,V002,Fresh Dairy Co.,accounts@freshdairy.example,(718) 555-0188,78431,2024-05-15,2024-05-22,192.44,Due Soon,yellow,8,fresh_dairy_78431.pdf,Email PDF,TRUE,Payment reminder needed
