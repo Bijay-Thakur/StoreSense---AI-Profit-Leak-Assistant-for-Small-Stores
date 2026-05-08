@@ -362,6 +362,15 @@ def invoice_import():
         }
     )
 
+@app.route("/api/test")
+def test():
+    return jsonify({
+        "message": "StoreSense backend is running",
+        "status": "success"
+    })
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
+
+
