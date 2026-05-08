@@ -52,7 +52,7 @@ Surfaces products and alerts where margins or supplier costs imply risk (for exa
 
 ### Product Insights
 
-**Product Insight** (`/products/milk-gallon`): sell price, vendor cost, margin change language, weekly units, days on hand, cost trend visualization, AI analysis copy, and recommended actions—via **`GET /api/products/milk-gallon`** (detail) and **`GET /api/products`** (list).
+**Product Insight** (`/products/milk-gallon`): sell price, vendor cost, margin change language, weekly units, days on hand, cost trend visualization, AI analysis copy, and recommended actions.
 
 ### Invoices
 
@@ -77,8 +77,6 @@ These routes exist in the **Next.js App Router** under `frontend/app/`:
 | `/invoices` | Vendor invoice tracker |
 | `/alerts` | Alerts |
 
-Legacy MVP routes (`/scan`, `/insights`) still exist but are secondary to the updated product flow above.
-
 ### Demo Login
 
 - Username: `admin`
@@ -95,13 +93,12 @@ Legacy MVP routes (`/scan`, `/insights`) still exist but are secondary to the up
 
 ## Tech Stack
 
-Verified from **`frontend/package.json`** and **`backend/requirements.txt`**:
+Verified from **`frontend/package.json`**:
 
 | Layer | Technologies |
 |--------|----------------|
 | **Frontend** | [Next.js](https://nextjs.org/) **16** (App Router), [React](https://react.dev/) **19**, [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/) **4**, [Lucide React](https://lucide.dev/) |
 | **Data Layer** | CSV files in `frontend/public/mock-data` + typed loaders/helpers in `frontend/src/data` |
-| **Backend (optional in MVP flow)** | [Python](https://www.python.org/) **3**, [Flask](https://flask.palletsprojects.com/) **3.x**, `flask-cors` |
 
 **Not used in this repository (do not assume):** Recharts (removed), Firebase, Supabase, OpenAI/LLM APIs, cloud OCR, real POS connectors, authentication services, or production databases.
 
@@ -115,7 +112,7 @@ The UI is **intentionally built** to show how StoreSense would behave once wired
 - Actual invoice ingestion (OCR or EDI)
 - Persistent vendor cost history and user accounts
 
-Until then, the value of the MVP is **product clarity**: owner-readable actions, plausible numbers, and a credible technical shell (Next.js + Flask + JSON API).
+Until then, the value of the MVP is **product clarity**: owner-readable actions, plausible numbers, and a credible technical shell (Next.js + typed mock data).
 
 ## Future Improvements
 
@@ -138,29 +135,11 @@ StoreSense targets the **few decisions that move the needle weekly**: reorder qu
 
 ## Getting Started
 
-Clone or open this repo. The app is split into **`frontend/`** (Next.js) and **`backend/`** (Flask).
+Clone or open this repo. The app lives in **`frontend/`** (Next.js).
 
 ### Prerequisites
 
-- **Node.js** (LTS recommended) and npm  
-- **Python 3** with `pip`
-
-### Backend (optional for legacy routes)
-
-```bash
-cd backend
-python -m venv .venv
-
-# Windows
-.\.venv\Scripts\activate
-# macOS / Linux
-# source .venv/bin/activate
-
-pip install -r requirements.txt
-python app.py
-```
-
-Flask listens on **`http://127.0.0.1:5000`** by default (`app.py`). This is optional for the updated CSV-driven core flow.
+- **Node.js** (LTS recommended) and npm
 
 ### Frontend
 
@@ -172,9 +151,9 @@ npm run dev
 
 Open **`http://localhost:3000`**.
 
-`npm run dev` uses **Webpack** (not Turbopack) with a raised Node heap (`NODE_OPTIONS` via **`cross-env`**) so the dev server stays stable on constrained machines and avoids scanning a mistaken parent-folder workspace (e.g. a lockfile higher up under your user profile). Optional: **`npm run dev:turbo`** for Turbopack if you prefer it locally.
+`npm run dev` uses **Webpack** (not Turbopack) with a raised Node heap (`NODE_OPTIONS` via **`cross-env`**) for stability on constrained machines. Optional: **`npm run dev:turbo`** for Turbopack if you prefer it locally.
 
-No environment variables are required for the updated CSV-driven MVP routes.
+No environment variables are required for this CSV-driven MVP.
 
 ### Production build (frontend)
 
@@ -184,8 +163,6 @@ npm install
 npm run build
 npm start
 ```
-
-The Next.js **`/api/proxy/*`** route uses **`BACKEND_URL`** (defaults to `http://127.0.0.1:5000`) when forwarding browser requests—ensure Flask is reachable from the machine hosting Next.js.
 
 ### Lint (frontend)
 
