@@ -1,4 +1,5 @@
 import { Activity, Clock3, ReceiptText, TrendingUp } from "lucide-react";
+import { HeaderActions } from "../components/header-actions";
 import { Card, ProductRow, ScreenHeader } from "../components/ui";
 import {
   formatCurrency,
@@ -32,7 +33,11 @@ export default async function SalesPage() {
       <ScreenHeader
         title="POS Activity"
         subtitle="Live sales synced from your POS."
-        rightSlot={<span className="rounded-full bg-[#ECFDF3] px-3 py-1 text-xs font-medium text-[#0F8A3B]">POS connected</span>}
+        rightSlot={
+          <HeaderActions>
+            <span className="rounded-full bg-[#ECFDF3] px-3 py-1 text-xs font-medium text-[#0F8A3B]">POS connected</span>
+          </HeaderActions>
+        }
       />
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">

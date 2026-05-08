@@ -1,5 +1,6 @@
-import Image from "next/image";
-import { AlertTriangle, Bell, DollarSign, Link2, Package, TrendingUp } from "lucide-react";
+import { AlertTriangle, DollarSign, Link2, Package, TrendingUp } from "lucide-react";
+import { HeaderActions } from "./components/header-actions";
+import { HomeMarketCta, HomePlanStrip } from "./components/home-plan-features";
 import { Badge, Card, ProductRow, ScreenHeader } from "./components/ui";
 import { formatCurrency, getDailySalesTrend } from "@/src/data/helpers";
 import { loadDailySummary, loadDashboardKpis, loadInvoices, loadProducts, loadRecommendations } from "@/src/data/loaders";
@@ -49,17 +50,12 @@ export default async function Home() {
       <ScreenHeader
         title="StoreSense"
         subtitle="Here&apos;s what&apos;s happening in your store today."
-        rightSlot={
-          <div className="flex items-center gap-2">
-            <button type="button" className="relative rounded-full border border-[#E5E7EB] p-2 text-[#6B7280]" aria-label="Notifications">
-              <Bell className="h-5 w-5" />
-              <span className="absolute -right-1 -top-1 h-4 w-4 rounded-full bg-[#16A34A] text-[10px] text-white">3</span>
-            </button>
-            <Image src="/owner-avatar.svg" alt="Sam" width={36} height={36} className="rounded-full border border-[#E5E7EB]" />
-          </div>
-        }
+        rightSlot={<HeaderActions />}
       />
-      <h2 className="text-[34px] font-bold leading-9 tracking-tight text-[#111827]">Good morning, Sam 👋</h2>
+      <div className="space-y-2">
+        <h2 className="text-[34px] font-bold leading-9 tracking-tight text-[#111827]">Good morning, Sam 👋</h2>
+        <HomePlanStrip />
+      </div>
 
       <Card className="bg-gradient-to-r from-[#0F8A3B] to-green-600 py-3 text-white">
         <div className="flex items-center gap-2 text-sm">Your daily profit and reorder assistant.</div>
@@ -160,6 +156,8 @@ export default async function Home() {
           ) : null}
         </div>
       </Card>
+
+      <HomeMarketCta />
 
       <Card>
         <div className="flex items-center justify-between">
