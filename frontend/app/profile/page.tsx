@@ -10,6 +10,7 @@ import { PlanBadge } from "../components/plan-badge";
 import { PlanCard } from "../components/plan-card";
 import { usePlan } from "../components/plan-provider";
 import { SettingsRow } from "../components/settings-row";
+import { ProfileToolsSection } from "../components/profile-tools-section";
 import { StoreProfileCard } from "../components/store-profile-card";
 import { storeProfile } from "@/src/data/storeProfile";
 
@@ -56,8 +57,8 @@ export default function ProfilePage() {
         </div>
         <p className="mt-3 text-sm text-[#6B7280]">
           {plan === "free"
-            ? "Free Plan helps you run the store day to day: POS sales, inventory, reorders, invoices, and profit-leak alerts."
-            : "Pro Plan adds nearby price context, competitor benchmarks, and optional analyst consultation — all demo data here."}
+            ? "Free Plan: POS activity, invoices, alerts, and product insights — your day-to-day operations layer."
+            : "Pro Plan: market benchmark, vendor scorecards, weekly owner brief, multilingual assistant, and analyst consultation (demo)."}
         </p>
         {plan === "free" ? (
           <button
@@ -111,6 +112,8 @@ export default function ProfilePage() {
           <SettingsRow label="Store location" value="Queens, NY" />
         </div>
       </Card>
+
+      <ProfileToolsSection />
 
       <AnalystConsultationCard />
     </div>

@@ -36,11 +36,18 @@ export default async function ProductsPage() {
     <div className="space-y-4">
       <ScreenHeader title="AI Reorder Plan" subtitle="What to buy this week" rightSlot={<HeaderActions />} />
 
+      <Card className="border-[#0F8A3B]/15 bg-[#F9FAFB]">
+        <Link href="/actions" className="flex items-center justify-between gap-3 text-sm font-semibold text-[#0F8A3B]">
+          <span>View all store decisions in Action Center</span>
+          <ArrowRight className="h-4 w-4 shrink-0" />
+        </Link>
+      </Card>
+
       <Card className="border-[#0F8A3B]/15 bg-gradient-to-r from-[#ECFDF3]/80 to-white">
         <Link href="/market" className="flex items-center justify-between gap-3">
           <div>
-            <p className="text-sm font-semibold text-[#111827]">Market Price Benchmark</p>
-            <p className="mt-0.5 text-xs text-[#6B7280]">Pro: compare your prices with nearby stores (demo data)</p>
+            <p className="text-sm font-semibold text-[#111827]">Compare top products with market prices</p>
+            <p className="mt-0.5 text-xs text-[#6B7280]">Pro: nearby benchmark for your best sellers (demo)</p>
           </div>
           <ArrowRight className="h-5 w-5 shrink-0 text-[#0F8A3B]" />
         </Link>

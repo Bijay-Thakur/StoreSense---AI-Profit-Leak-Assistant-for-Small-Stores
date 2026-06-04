@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Bell, FileText, House, Package, Square } from "lucide-react";
+import { BarChart3, Bell, FileText, House, ListChecks, Square } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home", icon: House },
   { href: "/sales", label: "Sales", icon: BarChart3 },
-  { href: "/products", label: "Reorder Plan", icon: Package, center: true },
+  { href: "/actions", label: "Actions", icon: ListChecks, center: true },
   { href: "/invoices", label: "Invoices", icon: FileText },
   { href: "/alerts", label: "Alerts", icon: Bell, badge: "2" },
 ];
@@ -24,7 +24,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="mx-auto min-h-dvh w-full bg-[#F9FAFB] md:max-w-6xl md:px-6">
       <nav className="fixed bottom-0 left-0 right-0 z-40 mx-auto flex w-full max-w-[460px] items-center justify-between border-t border-[#E5E7EB] bg-white/95 px-3 pb-4 pt-3 backdrop-blur sm:px-4 sm:pb-5 md:sticky md:top-4 md:mx-0 md:mt-4 md:max-w-none md:rounded-2xl md:border md:px-5 md:py-3 md:shadow-sm md:backdrop-blur-0">
         {navItems.map((item) => {
-          const isActive = pathname === item.href || (item.href === "/products" && pathname.startsWith("/products/"));
+          const isActive =
+            pathname === item.href ||
+            (item.href === "/actions" && (pathname === "/actions" || pathname.startsWith("/cost-match"))) ||
+            (item.href === "/invoices" && pathname.startsWith("/invoices"));
           const Icon = item.icon;
           if (item.center) {
             return (

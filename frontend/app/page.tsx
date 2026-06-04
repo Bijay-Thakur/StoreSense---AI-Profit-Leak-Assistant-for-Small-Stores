@@ -1,14 +1,17 @@
-import { AlertTriangle, DollarSign, Link2, Package, TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { AlertTriangle, DollarSign, Package, TrendingUp } from "lucide-react";
+import { DailySalesTrendChart } from "./components/daily-sales-trend-chart";
 import { HeaderActions } from "./components/header-actions";
-import { HomeMarketCta, HomePlanStrip } from "./components/home-plan-features";
+import { HomePlanStrip } from "./components/home-plan-features";
+import { OperationsHubSection } from "./components/operations-hub-section";
+import { PosFitCard } from "./components/pos-fit-card";
 import { Badge, Card, ProductRow, ScreenHeader } from "./components/ui";
-import { formatCurrency, getDailySalesTrend } from "@/src/data/helpers";
-import { loadDailySummary, loadDashboardKpis, loadInvoices, loadProducts, loadRecommendations } from "@/src/data/loaders";
+import { formatCurrency } from "@/src/data/helpers";
+import { loadDashboardKpis, loadInvoices, loadProducts, loadRecommendations } from "@/src/data/loaders";
 
 export default async function Home() {
-  const [kpis, daily, recommendations, invoices, products] = await Promise.all([
+  const [kpis, recommendations, invoices, products] = await Promise.all([
     loadDashboardKpis(),
-    loadDailySummary(),
     loadRecommendations(),
     loadInvoices(),
     loadProducts(),
@@ -19,27 +22,6 @@ export default async function Home() {
   const profitKpi = kpiMap.get("estimated_profit");
   const lowStockKpi = kpiMap.get("low_stock_items");
   const unpaidKpi = kpiMap.get("unpaid_invoices");
-  const trendDays = getDailySalesTrend(daily).slice(-6);
-  const maxSales = Math.max(...trendDays.map((d) => d.gross_sales), 1);
-  const minSales = Math.min(...trendDays.map((d) => d.gross_sales), maxSales);
-  const salesRange = maxSales - minSales;
-  const yTicks = [maxSales, minSales + salesRange * 0.66, minSales + salesRange * 0.33, minSales];
-  const chart = { left: 98, right: 24, top: 20, bottom: 36, width: 640, height: 280 };
-  const plotWidth = chart.width - chart.left - chart.right;
-  const plotHeight = chart.height - chart.top - chart.bottom;
-  const trendPoints = trendDays.map((day, idx) => {
-    const x = chart.left + idx * (plotWidth / Math.max(trendDays.length - 1, 1));
-    const normalized = (day.gross_sales - minSales) / Math.max(maxSales - minSales, 1);
-    const y = chart.top + (1 - normalized) * plotHeight;
-    return { x, y };
-  });
-  const trendPath = trendPoints.reduce((acc, point, idx, arr) => {
-    if (idx === 0) return `M ${point.x} ${point.y}`;
-    const prev = arr[idx - 1];
-    const cx = (prev.x + point.x) / 2;
-    return `${acc} Q ${cx} ${prev.y}, ${point.x} ${point.y}`;
-  }, "");
-  const areaPath = `${trendPath} L ${trendPoints[trendPoints.length - 1]?.x ?? chart.width - chart.right} ${chart.height - chart.bottom} L ${trendPoints[0]?.x ?? chart.left} ${chart.height - chart.bottom} Z`;
   const reorderAction = recommendations.find((r) => r.product_name.includes("Red Bull"));
   const priceAction = recommendations.find((r) => r.product_id === "P005");
   const dueInvoice = invoices.find((i) => i.invoice_number === "78612") ?? invoices.find((i) => i.status === "Due Soon");
@@ -56,10 +38,6 @@ export default async function Home() {
         <h2 className="text-[34px] font-bold leading-9 tracking-tight text-[#111827]">Good morning, Sam 👋</h2>
         <HomePlanStrip />
       </div>
-
-      <Card className="bg-gradient-to-r from-[#0F8A3B] to-green-600 py-3 text-white">
-        <div className="flex items-center gap-2 text-sm">Your daily profit and reorder assistant.</div>
-      </Card>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Card>
@@ -105,7 +83,12 @@ export default async function Home() {
       </Card>
 
       <Card>
-        <h2 className="text-base font-semibold">Today&apos;s AI Actions</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-base font-semibold">Today&apos;s top actions</h2>
+          <Link href="/actions" className="text-xs font-semibold text-[#0F8A3B]">
+            View all 8 →
+          </Link>
+        </div>
         <div className="mt-3 space-y-3">
           {reorderAction ? (
             <div className="rounded-2xl bg-[#ECFDF3] p-3">
@@ -157,71 +140,8 @@ export default async function Home() {
         </div>
       </Card>
 
-      <HomeMarketCta />
-
       <Card>
-        <div className="flex items-center justify-between">
-          <h2 className="text-base font-semibold">Daily Sales Trend (Mon-Sat)</h2>
-          <TrendingUp className="h-4 w-4 text-[#0F8A3B]" />
-        </div>
-        <div className="mt-4 rounded-2xl bg-[#F8FAFC] p-3 md:p-4">
-          {trendDays.length ? (
-            <div className="space-y-2">
-              <svg viewBox="0 0 640 280" className="h-52 w-full">
-                <defs>
-                  <linearGradient id="trendLine" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#16A34A" stopOpacity="0.95" />
-                    <stop offset="100%" stopColor="#0F8A3B" stopOpacity="0.8" />
-                  </linearGradient>
-                  <linearGradient id="trendArea" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#22C55E" stopOpacity="0.22" />
-                    <stop offset="100%" stopColor="#22C55E" stopOpacity="0.02" />
-                  </linearGradient>
-                </defs>
-                <line x1={chart.left} y1={chart.height - chart.bottom} x2={chart.width - chart.right} y2={chart.height - chart.bottom} stroke="#D1D5DB" strokeWidth="1.2" />
-                {[0.25, 0.5, 0.75].map((step) => (
-                  <line
-                    key={step}
-                    x1={chart.left}
-                    y1={chart.top + plotHeight * (1 - step)}
-                    x2={chart.width - chart.right}
-                    y2={chart.top + plotHeight * (1 - step)}
-                    stroke="#E5E7EB"
-                    strokeWidth="1"
-                    strokeDasharray="6 6"
-                  />
-                ))}
-                {yTicks.map((tick, i) => (
-                  <g key={`${tick}-${i}`}>
-                    <text
-                      x={8}
-                      y={i === 0 ? chart.top + 6 : i === 1 ? chart.top + plotHeight * 0.34 : i === 2 ? chart.top + plotHeight * 0.67 : chart.height - chart.bottom}
-                      fontSize="12"
-                      fontWeight="700"
-                      fill="#374151"
-                    >
-                      {formatCurrency(tick)}
-                    </text>
-                  </g>
-                ))}
-                <path d={areaPath} fill="url(#trendArea)" />
-                <path d={trendPath} fill="none" stroke="url(#trendLine)" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round" />
-                {trendPoints.map((p, i) => (
-                  <g key={`${p.x}-${i}`}>
-                    <circle cx={p.x} cy={p.y} r="6" fill="#fff" stroke="#16A34A" strokeWidth="3" />
-                  </g>
-                ))}
-              </svg>
-              <div className="grid grid-cols-6 text-center text-[11px] text-[#6B7280]">
-                {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-                  <span key={day}>{day}</span>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <p className="w-full text-sm text-[#6B7280]">No trend data found.</p>
-          )}
-        </div>
+        <DailySalesTrendChart />
       </Card>
 
       <Card>
@@ -243,12 +163,9 @@ export default async function Home() {
         </div>
       </Card>
 
-      <Card>
-        <div className="flex items-center gap-2 text-sm text-[#6B7280]">
-          <Link2 className="h-4 w-4 text-[#0F8A3B]" />
-          Every item sold from POS updates stock assumptions automatically.
-        </div>
-      </Card>
+      <OperationsHubSection />
+
+      <PosFitCard />
     </div>
   );
 }

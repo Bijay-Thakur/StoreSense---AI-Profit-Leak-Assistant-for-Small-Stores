@@ -1,11 +1,28 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Badge, Card, ScreenHeader } from "../components/ui";
 import { HeaderActions } from "../components/header-actions";
 import { getAlertsSummary, getUrgencyColor } from "@/src/data/helpers";
 import type { Alert, Product } from "@/src/data/types";
+
+function alertActionHref(alert: Alert): string {
+  if (alert.related_entity_type === "Invoice") return "/invoices";
+  if (alert.alert_type === "Invoice Due") return "/invoices";
+  if (alert.title.includes("Fresh Dairy") || alert.message.includes("Fresh Dairy")) {
+    return "/vendors/fresh-dairy";
+  }
+  if (alert.title.includes("Golden Supply") || alert.message.includes("Golden Supply")) {
+    return "/vendors/golden-supply";
+  }
+  if (alert.related_entity_type === "Product" && alert.related_entity_id === "P005") {
+    return "/products/milk-gallon";
+  }
+  if (alert.related_entity_type === "Product") return "/products";
+  return "/actions";
+}
 
 const filters = ["All", "High Priority", "Low Stock", "Invoices", "Profit Leaks"] as const;
 
@@ -71,7 +88,12 @@ export default function AlertsClient({ alerts, products }: { alerts: Alert[]; pr
                 </div>
                 <p className="mt-1 text-sm text-[#374151]">{alert.message}</p>
                 <p className="mt-2 text-sm font-medium text-[#0F8A3B]">Action: {alert.suggested_action}</p>
-                <button className="mt-2 rounded-xl border border-[#E5E7EB] px-3 py-1 text-xs">{alert.status === "Resolved" ? "View details" : "Take action"}</button>
+                <Link
+                  href={alertActionHref(alert)}
+                  className="mt-2 inline-flex rounded-xl border border-[#E5E7EB] bg-white px-3 py-1.5 text-xs font-medium text-[#374151] hover:border-[#0F8A3B]/40"
+                >
+                  {alert.status === "Resolved" ? "View details" : "Take action"}
+                </Link>
               </div>
             </div>
           </Card>

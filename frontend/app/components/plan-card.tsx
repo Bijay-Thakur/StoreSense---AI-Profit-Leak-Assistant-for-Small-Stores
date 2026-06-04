@@ -3,22 +3,21 @@
 import type { PlanTier } from "@/src/lib/plan";
 
 const freeFeatures = [
-  "POS sales dashboard",
-  "Inventory tracking",
-  "Reorder recommendations",
+  "POS activity dashboard",
   "Invoice tracking",
   "Profit-leak alerts",
-  "Basic product insights",
+  "Product insights",
+  "Import POS reports (demo)",
+  "Action Center (demo)",
 ];
 
 const proFeatures = [
   "Everything in Free",
-  "Market Price Benchmark",
-  "Nearby competitor price comparison",
-  "Top 5 popular item analysis",
-  "Suggested price actions",
-  "Business analyst consultation",
-  "Monthly growth report preview",
+  "Market benchmark",
+  "Vendor scorecards",
+  "Weekly owner brief",
+  "Multilingual assistant",
+  "Analyst consultation (demo)",
 ];
 
 export function PlanCard({

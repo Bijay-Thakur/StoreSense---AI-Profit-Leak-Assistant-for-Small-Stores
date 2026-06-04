@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
-import { FileText } from "lucide-react";
+import { FileText, GitCompare } from "lucide-react";
 import { Badge, Card, ScreenHeader } from "../components/ui";
 import { HeaderActions } from "../components/header-actions";
 import { formatCurrency, getInvoiceSummary, getStatusColor } from "@/src/data/helpers";
+import { vendorHrefFromName } from "@/src/data/vendorSlugs";
 import type { Invoice } from "@/src/data/types";
 
 const tabs = ["All", "Unpaid", "Paid"] as const;
@@ -28,10 +30,30 @@ export default function InvoicesClient({ invoices }: { invoices: Invoice[] }) {
         <Card><p className="text-xs text-[#6B7280]">Outstanding</p><p className="text-xl font-semibold">{formatCurrency(1184)}</p></Card>
       </div>
 
+      <Card className="border-[#0F8A3B]/20 bg-[#ECFDF3]/40">
+        <div className="flex items-start gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white text-[#0F8A3B]">
+            <GitCompare className="h-5 w-5" />
+          </div>
+          <div className="flex-1">
+            <p className="text-sm font-semibold text-[#111827]">4 invoice items need product matching</p>
+            <p className="mt-1 text-xs text-[#6B7280]">Connect invoice lines to POS products for accurate margins.</p>
+            <Link
+              href="/cost-match"
+              className="mt-3 inline-flex rounded-2xl bg-[#0F8A3B] px-4 py-2 text-xs font-semibold text-white"
+            >
+              Open Cost Match Center
+            </Link>
+          </div>
+        </div>
+      </Card>
+
       <Card className="bg-[#FEFCE8]">
         <div className="flex items-center justify-between">
           <p className="text-sm text-[#92400E]">48-hour payment reminders enabled</p>
-          <button className="rounded-xl border border-[#E5E7EB] bg-white px-3 py-1 text-xs">Manage</button>
+          <button type="button" className="rounded-xl border border-[#E5E7EB] bg-white px-3 py-1 text-xs">
+            Manage
+          </button>
         </div>
       </Card>
 
@@ -54,7 +76,9 @@ export default function InvoicesClient({ invoices }: { invoices: Invoice[] }) {
           <Card key={inv.invoice_id}>
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="font-semibold">{inv.vendor_name}</p>
+                <Link href={vendorHrefFromName(inv.vendor_name)} className="font-semibold text-[#111827] hover:text-[#0F8A3B]">
+                  {inv.vendor_name}
+                </Link>
                 <p className="text-xs text-[#6B7280]">Invoice #{inv.invoice_number}</p>
                 <p className="mt-1 text-xs text-[#6B7280]">Invoice Date: {inv.invoice_date}</p>
                 <p className="text-xs text-[#6B7280]">Due Date: {inv.due_date}</p>

@@ -23,7 +23,7 @@ export function MarketBenchmarkCard({ item }: { item: MarketBenchmarkItem }) {
             <Badge text={item.status} tone={statusTone(item.status)} />
           </div>
           <p className="mt-0.5 text-xs text-[#6B7280]">{item.category}</p>
-          <div className="mt-3 grid grid-cols-2 gap-2 text-xs sm:grid-cols-4">
+          <div className="mt-3 grid grid-cols-2 gap-2 text-xs sm:grid-cols-3">
             <div>
               <p className="text-[#9CA3AF]">Your price</p>
               <p className="font-semibold text-[#111827]">{formatCurrency(item.your_price)}</p>
@@ -33,10 +33,16 @@ export function MarketBenchmarkCard({ item }: { item: MarketBenchmarkItem }) {
               <p className="font-semibold text-[#111827]">{formatCurrency(item.nearby_avg_price)}</p>
             </div>
             <div>
-              <p className="text-[#9CA3AF]">Low / high</p>
-              <p className="font-semibold text-[#111827]">
-                {formatCurrency(item.lowest_competitor_price)} – {formatCurrency(item.highest_competitor_price)}
-              </p>
+              <p className="text-[#9CA3AF]">Vendor cost</p>
+              <p className="font-semibold text-[#111827]">{formatCurrency(item.vendor_cost)}</p>
+            </div>
+            <div>
+              <p className="text-[#9CA3AF]">Margin</p>
+              <p className="font-semibold text-[#0F8A3B]">{item.margin_pct}%</p>
+            </div>
+            <div>
+              <p className="text-[#9CA3AF]">Sales velocity</p>
+              <p className="font-semibold text-[#111827]">{item.sales_velocity}</p>
             </div>
             <div>
               <p className="text-[#9CA3AF]">vs avg</p>

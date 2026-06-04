@@ -1,3 +1,5 @@
+export type SalesVelocity = "High" | "Medium" | "Low";
+
 export type MarketBenchmarkItem = {
   product_id: string;
   product_name: string;
@@ -8,6 +10,9 @@ export type MarketBenchmarkItem = {
   lowest_competitor_price: number;
   highest_competitor_price: number;
   difference_pct: number;
+  vendor_cost: number;
+  margin_pct: number;
+  sales_velocity: SalesVelocity;
   status: string;
   suggested_action: string;
   market_area: string;
@@ -25,9 +30,11 @@ export const marketBenchmarks: MarketBenchmarkItem[] = [
     lowest_competitor_price: 4.29,
     highest_competitor_price: 5.19,
     difference_pct: -6.3,
+    vendor_cost: 3.02,
+    margin_pct: 32.7,
+    sales_velocity: "High",
     status: "Below Market",
-    suggested_action:
-      "You are slightly below market. Keep price or raise carefully to $4.79.",
+    suggested_action: "Raise carefully to $4.79–$4.99",
     market_area: "Queens, NY",
   },
   {
@@ -40,8 +47,11 @@ export const marketBenchmarks: MarketBenchmarkItem[] = [
     lowest_competitor_price: 37.99,
     highest_competitor_price: 44.99,
     difference_pct: -6.0,
+    vendor_cost: 28.49,
+    margin_pct: 42,
+    sales_velocity: "High",
     status: "Pricing Opportunity",
-    suggested_action: "Strong demand and below market average. Consider raising price moderately.",
+    suggested_action: "Small price increase possible",
     market_area: "Queens, NY",
   },
   {
@@ -54,8 +64,11 @@ export const marketBenchmarks: MarketBenchmarkItem[] = [
     lowest_competitor_price: 8.49,
     highest_competitor_price: 10.99,
     difference_pct: -5.3,
+    vendor_cost: 5.92,
+    margin_pct: 34,
+    sales_velocity: "High",
     status: "Competitive",
-    suggested_action: "Price is competitive. Keep current price if sales volume is strong.",
+    suggested_action: "Keep competitive price",
     market_area: "Queens, NY",
   },
   {
@@ -68,8 +81,11 @@ export const marketBenchmarks: MarketBenchmarkItem[] = [
     lowest_competitor_price: 3.79,
     highest_competitor_price: 4.99,
     difference_pct: -7.0,
+    vendor_cost: 2.87,
+    margin_pct: 28,
+    sales_velocity: "Medium",
     status: "Pricing Opportunity",
-    suggested_action: "Below market and selling well. Consider a small price increase.",
+    suggested_action: "Raise slightly if demand stays stable",
     market_area: "Queens, NY",
   },
   {
@@ -82,8 +98,11 @@ export const marketBenchmarks: MarketBenchmarkItem[] = [
     lowest_competitor_price: 2.29,
     highest_competitor_price: 3.49,
     difference_pct: -16.7,
+    vendor_cost: 2.19,
+    margin_pct: 12,
+    sales_velocity: "Low",
     status: "Do Not Reorder",
-    suggested_action: "Price is low but item is slow-moving. Do not reorder until inventory clears.",
+    suggested_action: "Do not reorder until stock clears",
     market_area: "Queens, NY",
   },
 ];

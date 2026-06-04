@@ -11,9 +11,9 @@ import { Card, ScreenHeader } from "../components/ui";
 import { getMarketBenchmarkSummary, marketBenchmarks } from "@/src/data/marketBenchmarks";
 
 const DEMO_SUMMARY = {
-  /** Illustrative headline figure for the demo (not a live index). */
   avgPriceGapDisplay: "+6.8%",
   pricingOpportunities: 3,
+  dataMode: "Demo Benchmark",
 };
 
 export default function MarketPage() {
@@ -53,10 +53,11 @@ export default function MarketPage() {
       />
 
       <p className="rounded-2xl border border-[#E5E7EB] bg-[#FEFCE8] px-3 py-2 text-xs text-[#854D0E]">
-        Demo benchmark data for Queens, NY — not live competitor pricing.
+        Competitor price alone is not enough. StoreSense compares your price, nearby market average, vendor cost, margin,
+        and sales velocity to suggest an action.
       </p>
 
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
         <Card>
           <p className="text-xs text-[#6B7280]">Items compared</p>
           <p className="mt-1 text-xl font-semibold text-[#111827]">{computed.itemsCompared}</p>
@@ -74,7 +75,22 @@ export default function MarketPage() {
           <p className="text-xs text-[#6B7280]">Market area</p>
           <p className="mt-1 text-xl font-semibold text-[#111827]">{computed.marketArea}</p>
         </Card>
+        <Card>
+          <p className="text-xs text-[#6B7280]">Data mode</p>
+          <p className="mt-1 text-sm font-semibold text-[#111827]">{DEMO_SUMMARY.dataMode}</p>
+        </Card>
       </div>
+
+      <Card className="border-[#0F8A3B]/20 bg-[#ECFDF3]/30">
+        <h2 className="text-base font-semibold text-[#111827]">Decision Lens</h2>
+        <p className="mt-2 text-sm text-[#374151]">
+          <span className="font-semibold text-[#111827]">Market price + Vendor cost + Sales velocity + Margin</span> = Suggested
+          action
+        </p>
+        <p className="mt-2 text-xs text-[#6B7280]">
+          StoreSense combines market price, vendor cost, margin, and sales velocity — not just competitor price.
+        </p>
+      </Card>
 
       <div>
         <h2 className="text-base font-semibold text-[#111827]">Top 5 popular items</h2>
@@ -104,8 +120,8 @@ export default function MarketPage() {
       <Card className="border-[#2563EB]/20 bg-blue-50/50">
         <h2 className="text-base font-semibold text-[#111827]">Market insight</h2>
         <p className="mt-2 text-sm leading-relaxed text-[#374151]">
-          Your most popular products are generally priced below the nearby market average. Red Bull, Eggs, and Milk show room for careful price increases
-          without losing competitiveness. Kettle Chips should not be reordered because low price is not improving turnover.
+          Milk, Red Bull, and Eggs show pricing room when margin and velocity stay strong. Coca-Cola is competitively priced.
+          Kettle Chips has low margin and low velocity — do not reorder until stock clears.
         </p>
       </Card>
 
