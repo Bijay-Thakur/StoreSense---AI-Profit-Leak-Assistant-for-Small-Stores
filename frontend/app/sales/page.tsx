@@ -115,8 +115,11 @@ export default async function SalesPage() {
 
       <Card>
         <h2 className="text-base font-semibold">Sales Today by Hour</h2>
-        <div className="mt-3 overflow-x-auto rounded-2xl bg-[#F8FAFC] p-3 md:p-4">
-          <div className="grid min-w-[560px] items-end gap-2 md:min-w-0" style={{ gridTemplateColumns: `repeat(${Math.max(hourlyRows.length, 1)}, minmax(0, 1fr))` }}>
+        <div className="mt-3 w-full overflow-x-auto rounded-2xl bg-[#F8FAFC] p-3 md:overflow-visible md:p-4">
+          <div
+            className="grid w-full min-w-[min(100%,320px)] items-end gap-1 sm:gap-2 md:min-w-0"
+            style={{ gridTemplateColumns: `repeat(${Math.max(hourlyRows.length, 1)}, minmax(0, 1fr))` }}
+          >
             {hourlyRows.map((h) => {
               const pct = Math.max(6, Math.min(100, (h.sales / maxHourly) * 100));
               return (

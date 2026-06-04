@@ -36,7 +36,7 @@ export default async function Home() {
         rightSlot={<HeaderActions />}
       />
       <div className="space-y-2">
-        <h2 className="text-[34px] font-bold leading-9 tracking-tight text-[#111827]">Good morning, Sam 👋</h2>
+        <h2 className="text-2xl font-bold leading-tight tracking-tight text-[#111827] sm:text-3xl md:text-[34px] md:leading-9">Good morning, Sam 👋</h2>
         <HomePlanStrip />
       </div>
 

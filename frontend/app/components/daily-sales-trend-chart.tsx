@@ -43,14 +43,16 @@ export function DailySalesTrendChart({ data = defaultTrendData }: { data?: Trend
         <h2 className="text-base font-semibold text-[#111827]">{title}</h2>
       </div>
       <div className="mt-4 w-full rounded-2xl bg-[#F8FAFC] p-3 md:p-4">
-        <div className="flex w-full gap-2">
-          <div className="flex w-14 shrink-0 flex-col justify-between py-1 text-[10px] font-semibold text-[#374151]">
+        <div className="flex w-full min-w-0 gap-1 sm:gap-2">
+          <div className="hidden w-12 shrink-0 flex-col justify-between py-1 text-[9px] font-semibold text-[#374151] sm:flex sm:w-14 sm:text-[10px]">
             {yTicks.map((tick) => (
-              <span key={tick}>{formatCurrency(tick)}</span>
+              <span key={tick} className="truncate">
+                {formatCurrency(tick)}
+              </span>
             ))}
           </div>
           <div className="min-w-0 flex-1">
-            <svg viewBox="0 0 100 45" className="h-44 w-full" preserveAspectRatio="none" aria-hidden>
+            <svg viewBox="0 0 100 45" className="h-36 w-full min-w-0 sm:h-44" preserveAspectRatio="none" aria-hidden>
               <defs>
                 <linearGradient id="homeTrendArea" x1="0" x2="0" y1="0" y2="1">
                   <stop offset="0%" stopColor="#22C55E" stopOpacity="0.22" />

@@ -79,9 +79,54 @@
 - `app/components/profile-tools-section.tsx` — Advanced Tools
 - `app/import-pos/page.tsx` — PosFitCard
 
+## Vercel deployment & responsive audit (2026-06-04)
+
+| Task | Status |
+|------|--------|
+| Responsive audit (360–1440px) | Done |
+| Chart responsiveness fixed | Done |
+| Vercel build readiness | See below |
+| `.gitignore` updated (root) | Done |
+| `docs/DEPLOYMENT_CHECKLIST.md` | Done |
+| `docs/QA_CHECKLIST.md` | Done |
+| `frontend/vercel.json` | Done |
+
+### Responsive fixes
+
+- `globals.css` — `overflow-x: hidden` on html/body
+- `app-shell.tsx` — 6-tab nav `justify-evenly`, smaller center button, truncated labels
+- `ui.tsx` — `ScreenHeader` shrink/min-width for mobile
+- `page.tsx` — responsive greeting typography
+- `products/page.tsx` — spend grid `grid-cols-1 sm:grid-cols-3`
+- `market/page.tsx` — `sm:grid-cols-3 lg:grid-cols-5`
+- `daily-sales-trend-chart.tsx` — full-width SVG, y-axis `sm:flex`, aligned labels
+- `sales/page.tsx` — hourly chart scroll on mobile, no fixed 560px min on md+
+
+### Chart fixes
+
+- Home daily sales trend: responsive SVG width, labels under data points
+- Sales hourly: `overflow-x-auto` on small screens, flexible grid columns
+- Removed invalid Tailwind `xs:` breakpoint usage
+
+### Files changed (deployment pass)
+
+- `.gitignore` (repo root)
+- `frontend/vercel.json`
+- `frontend/app/globals.css`
+- `frontend/app/components/app-shell.tsx`
+- `frontend/app/components/ui.tsx`
+- `frontend/app/components/daily-sales-trend-chart.tsx`
+- `frontend/app/page.tsx`
+- `frontend/app/products/page.tsx`
+- `frontend/app/market/page.tsx`
+- `frontend/app/sales/page.tsx`
+- `docs/DEPLOYMENT_CHECKLIST.md`
+- `docs/QA_CHECKLIST.md`
+- `docs/BUILD_TRACKER.md`
+
 ## Build/lint status
 
-- **Build:** Pass (`npm run build`, 2026-06-04 — includes `/ai-insights`)
+- **Build:** Pass (`npm run build`, 2026-06-04 — Vercel deployment prep)
 - **Lint:** Pass (`npm run lint`, 2026-06-04)
 
 ## Known issues
@@ -90,9 +135,12 @@
 - Full vendor scorecard richest on Fresh Dairy; others show summary
 - Chart uses demo 7-day values on Home for stable presentation layout
 - No backend persistence
+- Demo auth: hard refresh on protected routes may redirect to login
+- Vercel **Root Directory** must be set to `frontend`
 
 ## Fixes applied
 
 - Sales chart: full-width SVG, aligned day labels, 7-day demo data
 - Action Center promoted to center bottom nav
 - Operations Hub 2-column grid with badges (not plain list)
+- Deployment docs + gitignore for Vercel MVP

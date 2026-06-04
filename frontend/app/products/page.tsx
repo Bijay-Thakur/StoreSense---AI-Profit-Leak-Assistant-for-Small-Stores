@@ -54,7 +54,7 @@ export default async function ProductsPage() {
       </Card>
 
       <Card className="bg-[#ECFDF3]">
-        <div className="grid grid-cols-3 gap-2 text-sm">
+        <div className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-3 sm:gap-2">
           <div>
             <p className="text-xs text-[#6B7280]">Total Estimated Spend</p>
             <p className="font-semibold">{formatCurrency(1248.5)}</p>

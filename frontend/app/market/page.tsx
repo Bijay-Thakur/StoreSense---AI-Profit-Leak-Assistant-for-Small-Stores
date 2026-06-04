@@ -57,7 +57,7 @@ export default function MarketPage() {
         and sales velocity to suggest an action.
       </p>
 
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         <Card>
           <p className="text-xs text-[#6B7280]">Items compared</p>
           <p className="mt-1 text-xl font-semibold text-[#111827]">{computed.itemsCompared}</p>

@@ -23,11 +23,11 @@ export function ScreenHeader({
 }) {
   return (
     <header className="flex items-start justify-between gap-3">
-      <div>
-        <h1 className="text-2xl font-semibold tracking-tight text-[#111827]">{title}</h1>
+      <div className="min-w-0 flex-1">
+        <h1 className="text-xl font-semibold tracking-tight text-[#111827] sm:text-2xl">{title}</h1>
         <p className="mt-1 text-sm text-[#6B7280]">{subtitle}</p>
       </div>
-      {rightSlot}
+      {rightSlot ? <div className="shrink-0">{rightSlot}</div> : null}
     </header>
   );
 }
