@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { AiInsightsCta } from "../../components/ai-insights-cta";
 import { HeaderActions } from "../../components/header-actions";
 import { Badge, Card, ProductAvatar, ScreenHeader } from "../../components/ui";
 import { formatCurrency } from "@/src/data/helpers";
@@ -112,6 +113,13 @@ export default async function MilkInsightPage() {
           </li>
         </ol>
       </Card>
+      <AiInsightsCta
+        title="Pricing questions?"
+        text="Ask why Milk Gallon is a profit leak and what price StoreSense recommends."
+        buttonLabel="Ask Pricing AI"
+        mode="pricing"
+      />
+
       <Card>
         <h2 className="text-base font-semibold">Why this matters</h2>
         <p className="mt-2 text-sm text-[#374151]">

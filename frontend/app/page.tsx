@@ -3,6 +3,7 @@ import { AlertTriangle, DollarSign, Package, TrendingUp } from "lucide-react";
 import { DailySalesTrendChart } from "./components/daily-sales-trend-chart";
 import { HeaderActions } from "./components/header-actions";
 import { HomePlanStrip } from "./components/home-plan-features";
+import { AiInsightsCta } from "./components/ai-insights-cta";
 import { OperationsHubSection } from "./components/operations-hub-section";
 import { PosFitCard } from "./components/pos-fit-card";
 import { Badge, Card, ProductRow, ScreenHeader } from "./components/ui";
@@ -162,6 +163,12 @@ export default async function Home() {
           )}
         </div>
       </Card>
+
+      <AiInsightsCta
+        title="Ask StoreSense AI"
+        text="Ask questions like “What should I reorder this week?” or “Which invoices are due soon?”"
+        buttonLabel="Open AI Insights"
+      />
 
       <OperationsHubSection />
 

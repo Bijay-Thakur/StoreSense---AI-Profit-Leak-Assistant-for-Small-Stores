@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { BarChart3, Building2, ClipboardList, Languages, Rocket } from "lucide-react";
+import { BarChart3, Building2, ClipboardList, Languages, Rocket, Sparkles } from "lucide-react";
 import { Card } from "./ui";
 import { usePlan } from "./plan-provider";
 
 const advancedTools = [
+  { label: "AI Insights", href: "/ai-insights", icon: Sparkles },
   { label: "Market Benchmark", href: "/market", icon: BarChart3 },
   { label: "Vendor Scorecard", href: "/vendors", icon: Building2 },
   { label: "Weekly Owner Brief", href: "/weekly-brief", icon: ClipboardList },

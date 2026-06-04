@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { AiInsightsCta } from "../components/ai-insights-cta";
 import { HeaderActions } from "../components/header-actions";
 import { Badge, Card, ScreenHeader } from "../components/ui";
 import {
@@ -90,6 +91,12 @@ export default function ActionCenterPage() {
           <ActionCard key={action.id} action={action} status={statuses[action.id]} onCta={() => handleCta(action)} />
         ))}
       </div>
+
+      <AiInsightsCta
+        title="Need help understanding these actions?"
+        text="Ask StoreSense AI to explain reorder, pricing, and invoice priorities in plain language."
+        buttonLabel="Ask AI"
+      />
 
       <Card className="bg-[#F8FAFC]">
         <h2 className="text-sm font-semibold text-[#111827]">More decisions</h2>

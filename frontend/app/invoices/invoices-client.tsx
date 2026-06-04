@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { FileText, GitCompare } from "lucide-react";
 import { Badge, Card, ScreenHeader } from "../components/ui";
+import { AiInsightsCta } from "../components/ai-insights-cta";
 import { HeaderActions } from "../components/header-actions";
 import { formatCurrency, getInvoiceSummary, getStatusColor } from "@/src/data/helpers";
 import { vendorHrefFromName } from "@/src/data/vendorSlugs";
@@ -47,6 +48,13 @@ export default function InvoicesClient({ invoices }: { invoices: Invoice[] }) {
           </div>
         </div>
       </Card>
+
+      <AiInsightsCta
+        title="Invoice questions?"
+        text="Ask which invoices are due, overdue, or should be paid first."
+        buttonLabel="Ask Invoice Assistant"
+        mode="invoice"
+      />
 
       <Card className="bg-[#FEFCE8]">
         <div className="flex items-center justify-between">

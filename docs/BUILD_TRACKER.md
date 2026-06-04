@@ -1,5 +1,27 @@
 # StoreSense Build Tracker
 
+## AI Insights (2026-06-04)
+
+| Task | Status |
+|------|--------|
+| AI Insights route (`/ai-insights`) | Done |
+| AI tab in bottom navigation (6 items) | Done |
+| Assistant modes (5) | Done |
+| Mock AI engine (`aiInsightEngine.ts`) | Done |
+| Suggested questions + chat UI | Done |
+| Source badges + quick action links | Done |
+| Home CTA | Done |
+| Contextual AI links (actions, invoices, milk product, profile) | Done |
+| Build + lint | See below |
+
+**Bottom nav (6 items):** Home | Sales | Actions (center) | **AI** | Invoices | Alerts
+
+**Assistant modes:** Sales Analyst, Invoice Assistant, Inventory / SKU Advisor, Pricing & Margin Analyst, Weekly Brief
+
+**Files:** `src/data/aiInsights.ts`, `src/lib/aiInsightEngine.ts`, `app/ai-insights/`, `app/components/ai-insights-cta.tsx`
+
+---
+
 ## IA reorganization (2026-06-04)
 
 | Task | Status |
@@ -14,10 +36,11 @@
 
 ## Navigation
 
-**Bottom nav (5 items):**
+**Bottom nav (6 items):**
 - Home → `/`
 - Sales → `/sales`
-- **Actions** (center) → `/actions` — was “Reorder Plan” → `/products`
+- **Actions** (center) → `/actions`
+- **AI** → `/ai-insights`
 - Invoices → `/invoices`
 - Alerts → `/alerts`
 
@@ -58,7 +81,7 @@
 
 ## Build/lint status
 
-- **Build:** Pass (`npm run build`, 2026-06-04)
+- **Build:** Pass (`npm run build`, 2026-06-04 — includes `/ai-insights`)
 - **Lint:** Pass (`npm run lint`, 2026-06-04)
 
 ## Known issues
