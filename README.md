@@ -21,6 +21,7 @@ StoreSense helps small stores turn POS reports, vendor invoices, inventory data,
 - [Solution](#solution)
 - [Key Features](#key-features)
 - [AI Strategy](#ai-strategy)
+- [Team](#team)
 - [Architecture](#architecture)
 - [Data Flow](#data-flow)
 - [Multi-Agent AI Vision](#multi-agent-ai-vision)
@@ -32,7 +33,6 @@ StoreSense helps small stores turn POS reports, vendor invoices, inventory data,
 - [Responsive Design](#responsive-design)
 - [Security and Data Privacy](#security-and-data-privacy)
 - [Roadmap](#roadmap)
-- [Team](#team)
 - [Why StoreSense Is Different](#why-storesense-is-different)
 - [Demo Narrative](#demo-narrative)
 - [Status](#status)
@@ -155,6 +155,17 @@ StoreSense is designed to evolve toward a **hybrid** stack:
 | **Weekly Brief Agent** | Aggregated KPIs and action lists |
 
 A **central AI orchestrator** routes the owner’s question to the right agent/tool, merges structured results, then narrates the answer in plain language.
+
+---
+
+## Team
+
+| Team Member | Role | Email| LinkedIn
+|-------------|------|-------|----------|
+| Alif Rony | Full Stack Developer, Automation Engineer | alifrony55@gmail.com | https://www.linkedin.com/in/alif-rony/ |
+| Joji Kashimura | Full Stack Developer, QA Analyst | "Joji.kashimura@live.lagcc.cuny.edu" | https://www.linkedin.com/in/joji-kashimura-765525196/ |
+| Lhakpa Kanchhi Sherpa | Project Manager, Full Stack Developer | Lhakpa.ami@gmail.com | https://www.linkedin.com/in/lhakpa-k-sherpa-55141b333/ |
+| Bijay Thakur | AI Engineer, Data Analyst |starbijay143@gmail.com | https://www.linkedin.com/in/bijay-thakur-6b7793258/ | 
 
 ---
 
@@ -490,17 +501,6 @@ Target devices: phone, tablet, and desktop browser.
 - **Multi-store** and franchise views  
 - **Business analyst portal** for pilot partners  
 - **Queens, NY** local market benchmark pilot with verified data provenance  
-
----
-
-## Team
-
-| Team Member | Role |
-|-------------|------|
-| Alif Rony | Full Stack Developer, Automation Engineer |
-| Joji Kashimura | Full Stack Developer, QA Analyst |
-| Lhakpa Kanchhi Sherpa | Project Manager, Full Stack Developer |
-| Bijay Thakur | AI Engineer, Data Analyst |
 
 ---
 
