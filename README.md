@@ -163,7 +163,7 @@ A **central AI orchestrator** routes the owner’s question to the right agent/t
 | Team Member | Role | Email| LinkedIn
 |-------------|------|-------|----------|
 | Alif Rony | Full Stack Developer, Automation Engineer | alifrony55@gmail.com | https://www.linkedin.com/in/alif-rony/ |
-| Joji Kashimura | Full Stack Developer, QA Analyst | "Joji.kashimura@live.lagcc.cuny.edu" | https://www.linkedin.com/in/joji-kashimura-765525196/ |
+| Joji Kashimura | Full Stack Developer, QA Analyst | Joji.kashimura@live.lagcc.cuny.edu | https://www.linkedin.com/in/joji-kashimura-765525196/ |
 | Lhakpa Kanchhi Sherpa | Project Manager, Full Stack Developer | Lhakpa.ami@gmail.com | https://www.linkedin.com/in/lhakpa-k-sherpa-55141b333/ |
 | Bijay Thakur | AI Engineer, Data Analyst |starbijay143@gmail.com | https://www.linkedin.com/in/bijay-thakur-6b7793258/ | 
 
