@@ -6,6 +6,7 @@ import { HomePlanStrip } from "./components/home-plan-features";
 import { AiInsightsCta } from "./components/ai-insights-cta";
 import { OperationsHubSection } from "./components/operations-hub-section";
 import { PosFitCard } from "./components/pos-fit-card";
+import { StoreSenseBrand } from "./components/storesense-logo";
 import { Badge, Card, ProductRow, ScreenHeader } from "./components/ui";
 import { formatCurrency } from "@/src/data/helpers";
 import { loadDashboardKpis, loadInvoices, loadProducts, loadRecommendations } from "@/src/data/loaders";
@@ -32,6 +33,7 @@ export default async function Home() {
     <div className="space-y-4">
       <ScreenHeader
         title="StoreSense"
+        titleNode={<StoreSenseBrand size="lg" priority />}
         subtitle="Here&apos;s what&apos;s happening in your store today."
         rightSlot={<HeaderActions />}
       />

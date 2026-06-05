@@ -2,7 +2,7 @@
 
 import type { PlanTier } from "@/src/lib/plan";
 
-const freeFeatures = [
+const basicFeatures = [
   "POS activity dashboard",
   "Invoice tracking",
   "Profit-leak alerts",
@@ -12,7 +12,7 @@ const freeFeatures = [
 ];
 
 const proFeatures = [
-  "Everything in Free",
+  "Everything in Basic",
   "Market benchmark",
   "Vendor scorecards",
   "Weekly owner brief",
@@ -34,9 +34,9 @@ export function PlanCard({
   current?: boolean;
 }) {
   const isPro = tier === "pro";
-  const title = isPro ? "Pro Plan" : "Free Plan";
+  const title = isPro ? "Pro Plan" : "Basic Plan";
   const price = isPro ? "$99 / month" : "$49 / month";
-  const features = isPro ? proFeatures : freeFeatures;
+  const features = isPro ? proFeatures : basicFeatures;
 
   return (
     <button

@@ -1,3 +1,4 @@
+import { StoreSenseMark } from "./storesense-logo";
 import { Card } from "./ui";
 import type { StoreProfile } from "@/src/data/storeProfile";
 
@@ -15,8 +16,13 @@ export function StoreProfileCard({ profile }: { profile: StoreProfile }) {
 
   return (
     <Card>
-      <h2 className="text-base font-semibold text-[#111827]">Store profile</h2>
-      <p className="mt-1 text-xs text-[#6B7280]">Demo store information</p>
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <h2 className="text-base font-semibold text-[#111827]">Store profile</h2>
+          <p className="mt-1 text-xs text-[#6B7280]">Demo store information</p>
+        </div>
+        <StoreSenseMark size="sm" />
+      </div>
       <dl className="mt-4 space-y-3">
         {rows.map((r) => (
           <div key={r.label} className="flex flex-col gap-0.5 border-b border-[#F3F4F6] pb-3 last:border-0 last:pb-0">

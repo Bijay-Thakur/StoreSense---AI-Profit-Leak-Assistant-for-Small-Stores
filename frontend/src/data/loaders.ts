@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { readMockCsv } from "./csv";
 import type {
   Alert,
@@ -43,12 +44,12 @@ function mapProduct(r: StrRow): Product {
   };
 }
 
-export async function loadProducts() {
+export const loadProducts = cache(async () => {
   const rows = await readMockCsv<StrRow>("products.csv");
   return rows.map(mapProduct);
-}
+});
 
-export async function loadPosLines(): Promise<PosSaleLine[]> {
+export const loadPosLines = cache(async (): Promise<PosSaleLine[]> => {
   const rows = await readMockCsv<StrRow>("pos_sales_lines.csv");
   return rows.map((r) => ({
     transaction_id: r.transaction_id,
@@ -63,9 +64,9 @@ export async function loadPosLines(): Promise<PosSaleLine[]> {
     line_total: n(r.line_total),
     payment_method: r.payment_method,
   }));
-}
+});
 
-export async function loadDailySummary(): Promise<DailySalesSummary[]> {
+export const loadDailySummary = cache(async (): Promise<DailySalesSummary[]> => {
   const rows = await readMockCsv<StrRow>("daily_sales_summary.csv");
   return rows.map((r) => ({
     date: r.date,
@@ -77,9 +78,9 @@ export async function loadDailySummary(): Promise<DailySalesSummary[]> {
     avg_order_value: n(r.avg_order_value),
     pos_sync_status: r.pos_sync_status,
   }));
-}
+});
 
-export async function loadHourlySummary(): Promise<HourlySalesSummary[]> {
+export const loadHourlySummary = cache(async (): Promise<HourlySalesSummary[]> => {
   const rows = await readMockCsv<StrRow>("hourly_sales_summary.csv");
   return rows.map((r) => ({
     date: r.date,
@@ -88,9 +89,9 @@ export async function loadHourlySummary(): Promise<HourlySalesSummary[]> {
     units_sold: n(r.units_sold),
     sales: n(r.sales),
   }));
-}
+});
 
-export async function loadInventorySnapshot(): Promise<InventorySnapshot[]> {
+export const loadInventorySnapshot = cache(async (): Promise<InventorySnapshot[]> => {
   const rows = await readMockCsv<StrRow>("inventory_snapshot.csv");
   return rows.map((r) => ({
     product_id: r.product_id,
@@ -104,9 +105,9 @@ export async function loadInventorySnapshot(): Promise<InventorySnapshot[]> {
     recommended_reorder_qty: n(r.recommended_reorder_qty),
     stock_status: r.stock_status,
   }));
-}
+});
 
-export async function loadInvoices(): Promise<Invoice[]> {
+export const loadInvoices = cache(async (): Promise<Invoice[]> => {
   const rows = await readMockCsv<StrRow>("vendor_invoices.csv");
   return rows.map((r) => ({
     invoice_id: r.invoice_id,
@@ -124,9 +125,9 @@ export async function loadInvoices(): Promise<Invoice[]> {
     source: r.source,
     reminder_48h_enabled: r.reminder_48h_enabled,
   }));
-}
+});
 
-export async function loadCostHistory(): Promise<VendorCostHistory[]> {
+export const loadCostHistory = cache(async (): Promise<VendorCostHistory[]> => {
   const rows = await readMockCsv<StrRow>("vendor_cost_history.csv");
   return rows.map((r) => ({
     product_id: r.product_id,
@@ -136,9 +137,9 @@ export async function loadCostHistory(): Promise<VendorCostHistory[]> {
     week_start: r.week_start,
     unit_cost: n(r.unit_cost),
   }));
-}
+});
 
-export async function loadRecommendations(): Promise<Recommendation[]> {
+export const loadRecommendations = cache(async (): Promise<Recommendation[]> => {
   const rows = await readMockCsv<StrRow>("reorder_recommendations.csv");
   return rows.map((r) => ({
     recommendation_id: r.recommendation_id,
@@ -153,9 +154,9 @@ export async function loadRecommendations(): Promise<Recommendation[]> {
     priority: r.priority,
     reason: r.reason,
   }));
-}
+});
 
-export async function loadAlerts(): Promise<Alert[]> {
+export const loadAlerts = cache(async (): Promise<Alert[]> => {
   const rows = await readMockCsv<StrRow>("alerts.csv");
   return rows.map((r) => ({
     alert_id: r.alert_id,
@@ -171,9 +172,9 @@ export async function loadAlerts(): Promise<Alert[]> {
     status: r.status,
     created_at: r.created_at,
   }));
-}
+});
 
-export async function loadDashboardKpis(): Promise<DashboardKpi[]> {
+export const loadDashboardKpis = cache(async (): Promise<DashboardKpi[]> => {
   const rows = await readMockCsv<StrRow>("dashboard_kpis.csv");
   return rows.map((r) => ({
     metric_key: r.metric_key,
@@ -184,4 +185,4 @@ export async function loadDashboardKpis(): Promise<DashboardKpi[]> {
     comparison: r.comparison,
     status_color: r.status_color,
   }));
-}
+});

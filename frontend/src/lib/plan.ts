@@ -2,6 +2,10 @@ export type PlanTier = "free" | "pro";
 
 export const PLAN_STORAGE_KEY = "storesense_plan";
 
+export function getPlanLabel(tier: PlanTier): string {
+  return tier === "pro" ? "Pro Plan" : "Basic Plan";
+}
+
 const planListeners = new Set<() => void>();
 
 export function subscribePlan(listener: () => void) {

@@ -16,16 +16,20 @@ export function ScreenHeader({
   title,
   subtitle,
   rightSlot,
+  titleNode,
 }: {
   title: string;
   subtitle: string;
   rightSlot?: React.ReactNode;
+  titleNode?: React.ReactNode;
 }) {
   return (
     <header className="flex items-start justify-between gap-3">
       <div className="min-w-0 flex-1">
-        <h1 className="text-xl font-semibold tracking-tight text-[#111827] sm:text-2xl">{title}</h1>
-        <p className="mt-1 text-sm text-[#6B7280]">{subtitle}</p>
+        {titleNode ?? (
+          <h1 className="text-xl font-semibold tracking-tight text-[#111827] sm:text-2xl">{title}</h1>
+        )}
+        <p className={`text-sm text-[#6B7280] ${titleNode ? "mt-2" : "mt-1"}`}>{subtitle}</p>
       </div>
       {rightSlot ? <div className="shrink-0">{rightSlot}</div> : null}
     </header>

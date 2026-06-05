@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { HeaderActions } from "../components/header-actions";
+import { StoreSenseMark } from "../components/storesense-logo";
 import { Badge, Card, ScreenHeader } from "../components/ui";
 import {
   INITIAL_GREETING,
@@ -79,6 +80,12 @@ export function AIInsightsClient({ initialMode }: { initialMode: AssistantModeId
     <div className="space-y-4">
       <ScreenHeader
         title="AI Insights"
+        titleNode={
+          <div className="flex items-center gap-2.5">
+            <StoreSenseMark size="sm" />
+            <h1 className="text-xl font-semibold tracking-tight text-[#111827] sm:text-2xl">AI Insights</h1>
+          </div>
+        }
         subtitle="Ask StoreSense questions about sales, invoices, inventory, and profit leaks."
         rightSlot={<HeaderActions />}
       />

@@ -29,7 +29,7 @@ export default function ProfilePage() {
     setPlan("pro");
   }
 
-  function selectFree() {
+  function selectBasic() {
     setPlan("free");
   }
 
@@ -57,7 +57,7 @@ export default function ProfilePage() {
         </div>
         <p className="mt-3 text-sm text-[#6B7280]">
           {plan === "free"
-            ? "Free Plan: POS activity, invoices, alerts, and product insights — your day-to-day operations layer."
+            ? "Basic Plan: POS activity, invoices, alerts, and product insights — your day-to-day operations layer."
             : "Pro Plan: market benchmark, vendor scorecards, weekly owner brief, multilingual assistant, and analyst consultation (demo)."}
         </p>
         {plan === "free" ? (
@@ -79,9 +79,9 @@ export default function ProfilePage() {
             <button
               type="button"
               className="flex-1 rounded-2xl border border-[#E5E7EB] py-3 text-sm font-semibold text-[#374151]"
-              onClick={selectFree}
+              onClick={selectBasic}
             >
-              Switch to Free
+              Switch to Basic
             </button>
           </div>
         )}
@@ -90,7 +90,7 @@ export default function ProfilePage() {
       <div>
         <h2 className="mb-2 text-sm font-semibold text-[#111827]">Select plan</h2>
         <div className="grid gap-3 md:grid-cols-2">
-          <PlanCard tier="free" selected={plan === "free"} current={plan === "free"} onSelect={selectFree} />
+          <PlanCard tier="free" selected={plan === "free"} current={plan === "free"} onSelect={selectBasic} />
           <PlanCard tier="pro" selected={plan === "pro"} current={plan === "pro"} recommended onSelect={selectPro} />
         </div>
         <p className="mt-2 text-xs text-[#9CA3AF]">No checkout — &quot;Pro&quot; is a demo preview only.</p>

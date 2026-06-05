@@ -48,8 +48,17 @@ export function parseCsv<T extends Record<string, string>>(raw: string): T[] {
   });
 }
 
+const csvCache = new Map<string, Promise<Record<string, string>[]>>();
+
 export async function readMockCsv<T extends Record<string, string>>(filename: string): Promise<T[]> {
-  const filePath = path.join(process.cwd(), "public", "mock-data", filename);
-  const raw = await readFile(filePath, "utf8");
-  return parseCsv<T>(raw);
+  let pending = csvCache.get(filename);
+  if (!pending) {
+    pending = (async () => {
+      const filePath = path.join(process.cwd(), "public", "mock-data", filename);
+      const raw = await readFile(filePath, "utf8");
+      return parseCsv(raw);
+    })();
+    csvCache.set(filename, pending);
+  }
+  return (await pending) as T[];
 }

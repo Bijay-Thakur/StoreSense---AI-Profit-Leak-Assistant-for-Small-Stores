@@ -12,6 +12,10 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "StoreSense",
   description: "AI Profit Leak & Reorder Assistant for Small Stores",
+  icons: {
+    icon: "/Logo.png",
+    apple: "/Logo.png",
+  },
 };
 
 export default function RootLayout({
