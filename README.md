@@ -497,7 +497,7 @@ Target devices: phone, tablet, and desktop browser.
 
 | Team Member | Role |
 |-------------|------|
-| Alif Rony | Full Stack Developer, Presenter |
+| Alif Rony | Full Stack Developer, Automation Engineer |
 | Joji Kashimura | Full Stack Developer, QA Analyst |
 | Lhakpa Kanchhi Sherpa | Project Manager, Full Stack Developer |
 | Bijay Thakur | AI Engineer, Data Analyst |
